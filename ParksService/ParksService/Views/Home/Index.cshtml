@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <table id="parks-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>State</td>
+                <td>Designation</td>
+                @* <td>Full Name</td> *@
+                @* <td>Description</td> *@
+                @* <td>WeatherInfo</td> *@
+                @* <td>Park Code</td> *@
+                @* <td>Directions</td> *@
+                @* <td>Directions URL</td> *@
+                <td>Coordinates</td>
+                <td>Url</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#parks-table').DataTable({
+                ajax: {
+                    type: "GET",
+                    url: 'https://developer.nps.gov/api/v1/parks',
+                    data: {
+                        api_key: "5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs"
+                    }
+                },
+                processing: true,
+                language: {
+                    processing: '<i class="fa fa-cog fa-spin fa-4x fa-fw"></i>'
+                },
+//                dom:
+//                    "tr" +
+//                        "<'row'<'col-sm-6 text-left'i><'col-sm-6 text-right'l>>" +
+//                        "<'row'<'col-sm-12'p>>",
+                rowId: "Id",
+                columns: [
+                    { data: "id" },
+                    { data: "name" },
+                    { data: "states" },
+                    { data: "designation" },
+//                    { data: "fullName" },
+//                    { data: "description" },
+//                    { data: "weatherInfo" },
+//                    { data: "parkCode" },
+//                    { data: "directions" },
+//                    { data: "directionsUrl" },
+                    { data: "latLong" },
+                @*    
+                     https://www.google.co.uk/maps/@52.8382005,-6.8102368,6z
+                    *@
+                {
+                        data: "url",
+                        "render": function(data, type, row, meta) {
+                            return '<a href="' + data + '">Visit</a>';
+                        }
+        }
+                ]
+            });
+        });
+    </script>
+}
+
+
