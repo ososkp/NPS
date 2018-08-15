@@ -6,38 +6,148 @@ body {
 }
 
 /* Wrapping element */
+
 /* Set some basic padding to keep content from hitting the edges */
+
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 /* Carousel */
+
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
 }
 
 /* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
+
+.carousel-inner .item img[src$=".svg"] { width: 100%; }
 
 /* QR code generator */
-#qrCode {
-    margin: 15px;
-}
+
+#qrCode { margin: 15px; }
 
 /* Hide/rearrange for smaller screens */
+
 @media screen and (max-width: 767px) {
     /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+    .carousel-caption { display: none; }
 }
 
+/* My Overrides*/
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-color: lightgray;
+}
+
+/* Datatables Overrides */
+
 .sorting,
-.sorting-asc,
-.sorting-desc {
-    background-color: lightgrey;
+.sorting_asc,
+.sorting_desc {
+    background-color: #093511;
+    color: #e7e93e;
+}
+
+#parks-table {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: small;
+}
+
+.dataTables_length {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dataTables_filter { font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.dataTables_filter input {
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+}
+
+.dataTables_filter input:focus { box-shadow: 0 0 3pt 2pt #093511; }
+
+:focus { outline-color: #093511; }
+
+select {
+    border-radius: 6px;
+    outline: none;
+}
+
+.selected {
+    background-color: khaki !important;
+    color: #041908 !important;
+}
+
+    .selected .table-link {
+        color: forestgreen !important;
+    }
+
+.pagination > .active > a {
+    background-color: #093511;
+    border-color: #093511;
+}
+
+    .pagination > .active > a :focus {
+        background-color: #041908;
+        border-color: #041908;
+    }
+
+.pagination > li > a {
+    color: #093511;
+}
+
+/* Bootstrap Overrides */
+.navbar-inverse {
+    background-color: #093511;
+    border-color: #093511;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #e7e93e; /* Text color for site title*/
+}
+
+.navbar-inverse .navbar-nav > li > a { color: #b9ba30; }
+
+.navbar-nav {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand { font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.btn-primary,
+.btn-primary:visited {
+    background-color: darkkhaki;
+    color: #093511;
+    border-color: #093511;
+    outline-color: darkkhaki;
+    font-weight: 700;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-primary:hover {
+    color: #e7e93e;
+    background-color: #093511;
+    border-color: #093511;
+    outline-color: #093511 !important;
+}
+
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: #e7e93e;
+    background-color: #093511;
+    border-color: #093511;
+    outline-color: #093511 !important;
+}
+
+.btn-primary:focus {
+    color: #e7e93e !important;
+    background-color: #041908 !important;
+    border-color: #041908 !important;
+    outline-color: #041908 !important;
 }

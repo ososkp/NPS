@@ -1,3 +1,8 @@
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csproj.CoreCompileInputs.cache
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.RazorAssemblyInfo.cache
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.RazorAssemblyInfo.cs
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.AssemblyInfoInputs.cache
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.AssemblyInfo.cs
 C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\ParksService.deps.json
 C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\ParksService.runtimeconfig.json
 C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\ParksService.runtimeconfig.dev.json
@@ -5,12 +10,6 @@ C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\Pa
 C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\ParksService.pdb
 C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\ParksService.Views.dll
 C:\Users\ososk\source\repos\ParksService\ParksService\bin\Debug\netcoreapp2.1\ParksService.Views.pdb
-C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csprojAssemblyReference.cache
-C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csproj.CoreCompileInputs.cache
-C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.RazorAssemblyInfo.cache
-C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.RazorAssemblyInfo.cs
-C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.AssemblyInfoInputs.cache
-C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.AssemblyInfo.cs
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.TagHelpers.input.cache
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.TagHelpers.output.cache
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.RazorCoreGenerate.cache
@@ -28,3 +27,5 @@ C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\Pa
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.dll
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.pdb
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csproj.CopyComplete
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csprojAssemblyReference.cache
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\Razor\Views\Home\Test.g.cshtml.cs
