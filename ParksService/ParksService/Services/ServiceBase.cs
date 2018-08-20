@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ParksService.Data.Abstract;
+using ParksService.Data.Abstract.Repositories;
 
 namespace ParksService.Services
 {
     public abstract class ServiceBase
     {
-	    protected IDataHandler _dataHandler;
+	    protected IParkRepository _parkRepository;
 
-		protected ServiceBase(IDataHandler dataHandler)
+		protected ServiceBase(IParkRepository parkRepository)
 		{
-			_dataHandler = dataHandler;
+			_parkRepository = parkRepository;
 		}
     }
 }

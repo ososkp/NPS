@@ -1,0 +1,314 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* Overrides */
+#main {
+    width: 100%;
+    padding: 0;
+}
+
+.content-asset p {
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    display: none;
+}
+
+hr {
+    border-color: khaki;
+}
+
+footer p {
+    color: khaki;
+}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {
+    padding-top: 10px;
+}
+
+.margin-bot-10 {
+    padding-bottom: 10px;
+}
+
+/* Typography */
+/**************************/
+#nps-parallax h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+#nps-parallax h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-align: center;
+    color: khaki;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 10; /* Specifies stack order of an element (Bring to front, send to back etc) */
+    opacity: .8;
+}
+
+#nps-parallax h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 0;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: black;
+}
+
+#nps-parallax p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.first-character {
+    font-weight: 400;
+    float: left;
+    font-size: 84px;
+    line-height: 64px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Colors for paragraph first letters */
+.sc {
+    color: #3b8595;
+}
+
+.ny {
+    color: #3d3c3a;
+}
+
+.atw {
+    color: #c48660;
+}
+
+/* Section - Body */
+/**************************/
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 100%;
+}
+
+body {
+    background-color: #213838 !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Section - Title */
+/**************************/
+#nps-parallax .title {
+    background-color: darkkhaki;
+    padding: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    #nps-parallax .title h1 {
+        color: #213838 !important;
+        font-size: 35px;
+        letter-spacing: 8px;
+    }
+
+    #nps-parallax .title h3 {
+        color: #213838 !important;
+    }
+
+        /* Section - Block */
+        /**************************/
+#nps-parallax .block {
+    background-color: #fdf9d0;
+    padding: 60px;
+    width: 100% !important;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+@media screen and (max-width: 959px) and (min-width: 768px) {
+    #nps-parallax .block {
+        padding: 40px;
+        width: 100% !important;
+        box-shadow: 0 0 3pt 1pt #bdb76b;
+
+    }
+}
+
+#nps-parallax .block-gray {
+    background: #f2f2f2;
+    padding: 60px;
+}
+
+#nps-parallax .section-overlay-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.70;
+}
+
+/* Section - Parallax */
+/**************************/
+#nps-parallax .parallax-one {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden; /* What to do if content overflows an element's box '*/
+    position: relative; /* The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position */
+    width: 100%;
+    background-image: url(https://www.nationalparks.org/sites/default/files/styles/wide_1x/public/arches_420020.JPG?itok=NYO7FOnk);
+    background-attachment: fixed; /* How an element acts when scrolling - fixed means it won't scroll with the page */
+    background-size: cover; /* Cover: Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges */
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#nps-parallax .parallax-two {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://www.nps.gov/yose/learn/news/images/28-September-2017-Horsetail-Fall-rockfall-overview.JPG);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#nps-parallax .parallax-three {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://www.ndtahq.com/wp-content/uploads/2017/05/DSC_0118.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#nps-parallax .parallax-four {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg/1280px-Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#nps-parallax .parallax-five {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://www.brewsterbythesea.com/wp-content/uploads/trurolighthouse-20090506-0113.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#nps-parallax .parallax-six {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://keywestseaplanecharters.com/img/slide-01.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+
+/* Extras */
+/**************************/
+#nps-parallax .line-break {
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+/**************************/
+
+/*
+    @media - apply styles for different media types
+    One example of use is for responsiveness
+    Also:
+        width and height of the viewport
+        width and height of the device
+        orientation (is the tablet/phone in landscape or portrait mode?)
+        resolution
+*/
+
+@media screen and (max-width: 959px) and (min-width: 768px) {
+    #nps-parallax .block {
+        padding: 40px;
+        width: 620px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #nps-parallax .block {
+        padding: 30px;
+        width: 420px;
+    }
+
+    #nps-parallax h2 {
+        font-size: 30px;
+    }
+
+    #nps-parallax .block {
+        padding: 30px;
+    }
+
+    #nps-parallax .parallax-one, #nps-parallax .parallax-two, #nps-parallax .parallax-three {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #nps-parallax .block {
+        padding: 30px 15px;
+        width: 290px;
+    }
+}

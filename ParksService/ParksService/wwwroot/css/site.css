@@ -42,7 +42,7 @@ html, body {
 }
 
 body {
-    background-color: lightgray;
+    background-color: #efefef;
 }
 
 /* Datatables Overrides */
@@ -50,7 +50,7 @@ body {
 .sorting,
 .sorting_asc,
 .sorting_desc {
-    background-color: #093511;
+    background-color: #213838;
     color: #e7e93e;
 }
 
@@ -71,9 +71,15 @@ body {
     box-shadow: none;
 }
 
-.dataTables_filter input:focus { box-shadow: 0 0 3pt 2pt #093511; }
+.dataTables_filter input:focus { box-shadow: 0 0 3pt 2pt #213838; }
 
-:focus { outline-color: #093511; }
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    white-space: nowrap;
+    padding-bottom: 11px;
+    padding-left: 21px;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 select {
     border-radius: 6px;
@@ -90,42 +96,98 @@ select {
     }
 
 .pagination > .active > a {
-    background-color: #093511;
-    border-color: #093511;
+    background-color: #213838 !important;
+    border-color: #213838 !important;
+    color: #e7e93e !important;
 }
 
-    .pagination > .active > a :focus {
-        background-color: #041908;
-        border-color: #041908;
+    .pagination > .active > a:focus {
+        background-color: #041908 !important;
+        border-color: #041908 !important;
+        color: #e7e93e !important;
     }
 
-.pagination > li > a {
-    color: #093511;
+        .pagination > .active > a:focus:active {
+            border-color: #213838 !important;
+        }
+
+
+.pagination > li > a:focus {
+    border-color: #213838 !important;
+    outline-color: #213838 !important;
 }
 
-/* Bootstrap Overrides */
+
+.pagination > .active > a:hover {
+    background-color: darkkhaki !important;
+    color: #213838 !important;
+    border-color: #041908 !important;
+}
+
+.pagination > li > a {
+    color: #213838 !important;
+}
+
+    .pagination > li > a:hover {
+        border-color: #213838 !important;
+        color: #213838 !important;
+    }
+
+    .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+        color: #213838 !important;
+        border-color: #213838 !important;
+    }
+
+        /* Bootstrap Overrides */
 .navbar-inverse {
-    background-color: #093511;
-    border-color: #093511;
+    /* background-color: #093511 !important; */
+    /* border-color: #093511 !important; */
+    background-color: #213838 !important;
+    border-color: #213838 !important;
 }
 
 .navbar-inverse .navbar-brand {
     color: #e7e93e; /* Text color for site title*/
+    font-size: 24px;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 9px;
 }
 
 .navbar-inverse .navbar-nav > li > a { color: #b9ba30; }
 
 .navbar-nav {
     font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
 }
 
 .navbar-brand { font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #1d3131; /* Dropdown Button Color */
+}
+
+.dropdown-menu {
+    background-color: #1d3131;
+}
+
+.dropdown-menu > li > a {
+    color: #b9ba30;
+}
+
+    .dropdown-menu > li > a:hover {
+        color: #1d3131 !important;
+    }
+    .dropdown-menu > li > a:focus {
+        color: #1d3131 !important;
+        outline-color: darkkhaki !important;
+    }
+
 .btn-primary,
 .btn-primary:visited {
     background-color: darkkhaki;
-    color: #093511;
-    border-color: #093511;
+    color: #213838;
+    border-color: #213838;
     outline-color: darkkhaki;
     font-weight: 700;
     font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -133,16 +195,16 @@ select {
 
 .btn-primary:hover {
     color: #e7e93e;
-    background-color: #093511;
-    border-color: #093511;
-    outline-color: #093511 !important;
+    background-color: #213838;
+    border-color: #213838;
+    outline-color: #213838 !important;
 }
 
 .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     color: #e7e93e;
-    background-color: #093511;
-    border-color: #093511;
-    outline-color: #093511 !important;
+    background-color: #213838;
+    border-color: #213838;
+    outline-color: #213838 !important;
 }
 
 .btn-primary:focus {
@@ -150,4 +212,8 @@ select {
     background-color: #041908 !important;
     border-color: #041908 !important;
     outline-color: #041908 !important;
+}
+
+.form-control:focus {
+    border-color: #213838;
 }

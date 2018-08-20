@@ -1,6 +1,6 @@
-﻿namespace ParksService.Models
+﻿namespace ParksService.ViewModels
 {
-	public interface IPark
+	public interface IParkViewModel
 	{
 		string Id { get; set; }
 		string Name { get; set; }

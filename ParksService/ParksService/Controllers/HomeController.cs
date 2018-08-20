@@ -1,57 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ParksService.Services;
 using ParksService.ViewModels;
 using System.Diagnostics;
 using System.Linq;
-using ParksService.Data;
-using ParksService.Data.Abstract;
+using ParksService.Data.Abstract.Repositories;
 using ParksService.Models;
-using JsonHandler = ParksService.Services.JsonHandler;
 
 
 namespace ParksService.Controllers
 {
 	public class HomeController : BaseController
     {
-		public HomeController(IWorker worker) : base(worker)
+		public HomeController(IParkRepository parkRepository) : base(parkRepository)
 		{
 		}
 
         public IActionResult Index()
         {
-	        var data = JsonHandler.GetParks();
-	        return View(data);
+	        return View();
 		}
 
 	    [HttpGet]
 	    public IActionResult GetParks()
 	    {
-		    var data = JsonHandler.GetParks();
+		    var data = _parkRepository.GetAll();
 		    return Json(new {data});
 	    }
 
 	    [HttpPost]
-	    public IActionResult PopulateParks([FromBody] IEnumerable<ParkData> data)
+	    public IActionResult PopulateParks([FromBody] IEnumerable<Park> data)
 	    {
-		    JsonHandler.WriteParksData(data);
+		    // Repopulate the local Json and app data
 
-		    return Content("Ok");
+			_parkRepository.RepopulateParksList(data);
+
+			return Content("Ok");
 	    }
 
         public IActionResult About()
         {
-			var data = JsonHandler.GetParks();
-	        return View(data);
+	        return View(_parkRepository.GetAll());
 		}
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+	    public IActionResult Explore()
+	    {
+		    return View(_parkRepository.GetAll());
+	    }
 
-            return View();
-        }
+        public IActionResult Directory()
+        {
+	        return View(_parkRepository.GetAll());
+		}
+
+	    public IActionResult ViewDetails(string id)
+	    {
+		    var park = _parkRepository.Find(p => p.Id == id).FirstOrDefault();
+		    return PartialView("_ViewDetailsModal", park);
+	    }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

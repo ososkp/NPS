@@ -1,36 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using Newtonsoft.Json;
-using ParksService.Data.Abstract;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ParksService.Data.Abstract.Repositories;
+using ParksService.Models;
 using ParksService.Services.Abstract;
 
 namespace ParksService.Services.Concrete
 {
     public class ParkService : ServiceBase, IParkService
     {
-		public ParkService(IDataHandler dataHandler) : base(dataHandler)
+		public ParkService(IParkRepository parkRepository) : base(parkRepository)
 		{
 		}
 
-	    public string ParseLatitude(string coordinates)
+	    public IEnumerable<Park> GetAll()
 	    {
-		    var index = coordinates.IndexOf(",", StringComparison.Ordinal);
-
-		    var latitude = coordinates.Substring(4, index-4);
-
-		    return latitude;
+		    return _parkRepository.GetAll();
 	    }
 
-	    public string ParseLongitude(string coordinates)
+	    public Park GetParkById(string id)
 	    {
-		    var index = coordinates.IndexOf("g", StringComparison.Ordinal) + 1;
-		    var longitude = coordinates.Substring(index + 1, coordinates.Length - index - 1);
-
-		    return longitude;
+		    return _parkRepository.Find(p => p.Id == id).FirstOrDefault();
 	    }
 
-	    
-
-    }
+	    public IEnumerable<Park> GetParksByState(string state)
+	    {
+		    return _parkRepository.Find(p => p.States == state);
+	    }
+	}
 }

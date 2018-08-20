@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using ParksService.Models;
 
 namespace ParksService.Services.Abstract
 {
 	public interface IParkService
 	{
-		string ParseLatitude(string coordinates);
-		string ParseLongitude(string coordinates);
+		Park GetParkById(string id);
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace ParksService.Models
 {
-	public class ParkData : IParkData
+	public class Park
 	{
 		public string States { get; set; }
 		public string LatLong { get; set; }

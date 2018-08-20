@@ -1,10 +1,10 @@
 // https://developer.nps.gov/api/v1/parks?api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
 
-using ParksService.Models;
+using ParksService.ViewModels;
 
 namespace ParksService.ViewModels
 {
-	public class Park : IPark
+	public class ParkViewModel : IParkViewModel
 	{
         public string Id { get; set; }
         public string Name { get; set; }
