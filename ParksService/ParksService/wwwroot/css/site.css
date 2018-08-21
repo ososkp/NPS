@@ -87,7 +87,8 @@ select {
 }
 
 .selected {
-    background-color: khaki !important;
+    /* background-color: khaki !important; */
+    background-color: #ede9ce !important;
     color: #041908 !important;
 }
 
@@ -190,6 +191,7 @@ select {
     border-color: #213838;
     outline-color: darkkhaki;
     font-weight: 700;
+    font-size: 12px;
     font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -214,6 +216,90 @@ select {
     outline-color: #041908 !important;
 }
 
+.btn:focus, .btn:active:focus {
+    outline-color: #213838 !important;
+}
+
 .form-control:focus {
     border-color: #213838;
+}
+
+/* Details View Popup */
+#view-details {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    #view-details hr {
+        border-color: #213838;
+    }
+
+#details-header {
+    background-color: #041908;
+    color: khaki;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -34px;
+    margin-bottom: -12px;
+    border-color: #213838;
+    padding: 11px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#details-header h3 {
+    letter-spacing: 4px;
+}
+
+.modal-body {
+    background-color: #efefef;
+    color: #041908;
+}
+
+.modal-content {
+    background-color: #213838;
+}
+
+.modal-footer {
+    background-color: darkkhaki;
+    color: #213838;
+    border-color: #213838;
+}
+
+/* Collapsible Buttons for Details View */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: #aaaaaa !important;
+    color: #000000;
+    border-style: inset;
+    border-width: thin;
+}
+
+    .active, .collapsible:hover {
+        background-color: #ccc;
+    }
+
+.content {
+    padding: 0 18px;
+    background-color: #e4e4e4;
+    color: black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 2px;
+}
+
+.bootbox-close-button {
+    color: khaki;
 }

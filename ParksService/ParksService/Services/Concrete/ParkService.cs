@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ParksService.Data.Abstract.Repositories;
 using ParksService.Models;
@@ -12,12 +13,12 @@ namespace ParksService.Services.Concrete
 		{
 		}
 
-	    public IEnumerable<Park> GetAll()
+		public IEnumerable<Park> GetAll()
 	    {
 		    return _parkRepository.GetAll();
 	    }
 
-	    public Park GetParkById(string id)
+	    public Park GetParkById(Guid id)
 	    {
 		    return _parkRepository.Find(p => p.Id == id).FirstOrDefault();
 	    }

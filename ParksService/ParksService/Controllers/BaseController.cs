@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ParksService.Data.Abstract;
 using ParksService.Data.Abstract.Repositories;
@@ -12,10 +13,12 @@ namespace ParksService.Controllers
     {
 	    // ReSharper disable once InconsistentNaming
 	    protected IParkRepository _parkRepository;
+		protected readonly IMapper _mapper;
 
-	    protected BaseController(IParkRepository parkRepository)
+	    protected BaseController(IParkRepository parkRepository, IMapper mapper)
 	    {
 		    _parkRepository = parkRepository;
+			_mapper = mapper;
 	    }
     }
 }

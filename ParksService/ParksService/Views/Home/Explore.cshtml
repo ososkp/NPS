@@ -1,5 +1,5 @@
-﻿@using ParksService.Models
-@model IEnumerable<Park>
+﻿@using ParksService.ViewModels
+@model IEnumerable<ParkViewModel>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -33,4 +33,8 @@
 @foreach (var park in Model)
 {
     <p>@park.FullName</p>
+    <ul>
+        <li>@park.Id</li>
+        <li>@park.FullState</li>
+    </ul>
 }

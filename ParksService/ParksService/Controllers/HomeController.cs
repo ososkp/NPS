@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using ParksService.ViewModels;
 using System.Diagnostics;
 using System.Linq;
+using AutoMapper;
 using ParksService.Data.Abstract.Repositories;
 using ParksService.Models;
 
@@ -11,7 +13,7 @@ namespace ParksService.Controllers
 {
 	public class HomeController : BaseController
     {
-		public HomeController(IParkRepository parkRepository) : base(parkRepository)
+		public HomeController(IParkRepository parkRepository, IMapper mapper) : base(parkRepository, mapper)
 		{
 		}
 
@@ -23,8 +25,10 @@ namespace ParksService.Controllers
 	    [HttpGet]
 	    public IActionResult GetParks()
 	    {
-		    var data = _parkRepository.GetAll();
-		    return Json(new {data});
+		    var parks = _parkRepository.GetAll().ToList();
+		    var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+
+			return Json(new {viewModel});
 	    }
 
 	    [HttpPost]
@@ -39,23 +43,35 @@ namespace ParksService.Controllers
 
         public IActionResult About()
         {
-	        return View(_parkRepository.GetAll());
+	        var parks = _parkRepository.GetAll();
+			var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+
+			return View(viewModel);
 		}
 
 	    public IActionResult Explore()
 	    {
-		    return View(_parkRepository.GetAll());
-	    }
+			var parks = _parkRepository.GetAll();
+		    var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+
+		    return View(viewModel);
+		}
 
         public IActionResult Directory()
         {
-	        return View(_parkRepository.GetAll());
+			var parks = _parkRepository.GetAll();
+	        var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+
+	        return View(viewModel);
 		}
 
-	    public IActionResult ViewDetails(string id)
-	    {
+		[HttpGet]
+	    public IActionResult ViewDetails(Guid id)
+		{
 		    var park = _parkRepository.Find(p => p.Id == id).FirstOrDefault();
-		    return PartialView("_ViewDetailsModal", park);
+			var viewModel = _mapper.Map<ParkViewModel>(park);
+
+		    return PartialView("_ViewDetailsModal", viewModel);
 	    }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -30,3 +30,4 @@ C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\Pa
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.dll
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.pdb
 C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csproj.CopyComplete
+C:\Users\ososk\source\repos\ParksService\ParksService\obj\Debug\netcoreapp2.1\ParksService.csprojAssemblyReference.cache

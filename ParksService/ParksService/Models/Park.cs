@@ -1,4 +1,6 @@
-﻿namespace ParksService.Models
+﻿using System;
+
+namespace ParksService.Models
 {
 	public class Park
 	{
@@ -7,7 +9,7 @@
 		public string Description { get; set; }
 		public string Designation { get; set; }
 		public string ParkCode { get; set; }
-		public string Id { get; set; }
+		public Guid Id { get; set; }
 		public string DirectionsInfo { get; set; }
 		public string DirectionsUrl { get; set; }
 		public string FullName { get; set; }

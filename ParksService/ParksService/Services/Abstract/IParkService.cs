@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using ParksService.Models;
 
 namespace ParksService.Services.Abstract
 {
 	public interface IParkService
 	{
-		Park GetParkById(string id);
+		Park GetParkById(Guid id);
 	}
 }

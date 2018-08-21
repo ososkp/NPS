@@ -67,11 +67,26 @@ footer p {
     color: black;
 }
 
+#nps-parallax h4 {
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #3b8595;
+}
+
 #nps-parallax p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+}
+
+/* Standout Paragraphs */
+.standout {
+    text-align: center;
+    font-size: 24px;
 }
 
 .first-character {
@@ -85,16 +100,24 @@ footer p {
     font-family: 'Open Sans', sans-serif;
 }
 /* Colors for paragraph first letters */
-.sc {
-    color: #3b8595;
+.ut {
+    color: #8c441c;
 }
 
-.ny {
+.dc {
     color: #3d3c3a;
 }
 
-.atw {
-    color: #c48660;
+.az {
+    color: #b24840;
+}
+
+.ca {
+    color: #565826;
+}
+
+.ma {
+    color: #466416;
 }
 
 /* Section - Body */
@@ -108,7 +131,7 @@ footer p {
 }
 
 body {
-    background-color: #213838 !important;
+    background-color: #1b2b2b !important;
     font-family: 'Open Sans', sans-serif;
 }
 

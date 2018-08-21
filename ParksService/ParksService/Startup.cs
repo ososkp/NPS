@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -35,6 +36,8 @@ namespace ParksService
 			*/
 	        services.AddSingleton<IParkService, ParkService>();
 	        services.AddSingleton<IParkRepository, ParkRepository>();
+
+	        services.AddAutoMapper();
 
 			services.AddMvc()
 		        .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

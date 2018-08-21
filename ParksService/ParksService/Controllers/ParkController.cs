@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using ParksService.Data;
 using ParksService.Data.Abstract;
 using ParksService.Data.Abstract.Repositories;
@@ -8,7 +9,7 @@ namespace ParksService.Controllers
 {
 	public class ParkController : BaseController
 	{
-		public ParkController(IParkRepository parkRepository) : base(parkRepository)
+		public ParkController(IParkRepository parkRepository, IMapper mapper) : base(parkRepository, mapper)
 		{
 		}
 

@@ -1,15 +1,16 @@
 // https://developer.nps.gov/api/v1/parks?api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
 
+using System;
 using ParksService.ViewModels;
 
 namespace ParksService.ViewModels
 {
-	public class ParkViewModel : IParkViewModel
+	public class ParkViewModel
 	{
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
-        public string State { get; set; }
-        public string Coordinates { get; set; }
+        public string States { get; set; }
+        public string LatLong { get; set; }
         public string Designation { get; set; }
 
         // Back-end
@@ -21,8 +22,9 @@ namespace ParksService.ViewModels
 
 		// Front-end
 		public string Description { get; set; }
-        public string Directions { get; set; }
+        public string DirectionsInfo { get; set; }
         public string WeatherInfo { get; set; }
         public string FullName { get; set; }
+		public string FullState { get; set; }
     }
 }
