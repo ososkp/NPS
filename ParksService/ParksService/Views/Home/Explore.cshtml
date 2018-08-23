@@ -1,6 +1,20 @@
 ﻿@using ParksService.ViewModels
 @model IEnumerable<ParkViewModel>
 
+@{
+    ViewData["Title"] = "Explore Parks";
+}
+
+<style>
+    body {
+        font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -29,12 +43,37 @@
     </div>
 </nav>
 
+<body>
+    <div class="explore">
+        <div class="form-group">
+            <label class="header-label">Search Parks by State</label>
+            <input name="state" class="form-control states-box" list="states-list" />
+            <datalist id="states-list">
+                @* Options populated from JS *@
+            </datalist>
+            <button class="btn btn-primary btn-lg search-button">Search</button>
+        </div>
+        
+        <div class="search-results form-control">
 
-@foreach (var park in Model)
-{
-    <p>@park.FullName</p>
-    <ul>
-        <li>@park.Id</li>
-        <li>@park.FullState</li>
-    </ul>
+        </div>
+        
+        
+
+        <hr />
+
+        @foreach (var park in Model)
+        {
+            <p>@park.FullName</p>
+            <ul>
+                <li>@park.Id</li>
+                <li>@park.FullState</li>
+            </ul>
+        }
+    </div>
+</body>
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/ExplorePageScripts.js"></script>
 }

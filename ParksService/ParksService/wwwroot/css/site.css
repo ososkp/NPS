@@ -147,14 +147,16 @@ select {
     border-color: #213838 !important;
 }
 
-.navbar-inverse .navbar-brand {
-    color: #e7e93e; /* Text color for site title*/
-    font-size: 24px;
-    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 9px;
-}
+    .navbar-inverse .navbar-brand {
+        color: #fdf9d0; /* Text color for site title*/
+        font-size: 24px;
+        font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: 9px;
+    }
 
-.navbar-inverse .navbar-nav > li > a { color: #b9ba30; }
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fdf9d0;
+    }
 
 .navbar-nav {
     font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -172,12 +174,13 @@ select {
     background-color: #1d3131;
 }
 
-.dropdown-menu > li > a {
-    color: #b9ba30;
-}
+    .dropdown-menu > li > a {
+        color: #fdf9d0;
+    }
 
     .dropdown-menu > li > a:hover {
         color: #1d3131 !important;
+        background-color: #fdf9d0;
     }
     .dropdown-menu > li > a:focus {
         color: #1d3131 !important;
@@ -302,4 +305,25 @@ select {
 
 .bootbox-close-button {
     color: khaki;
+}
+
+/* Explore Page Customization */
+.header-label {
+    font-size: large;
+    color: #213838;
+}
+
+.explore .search-button {
+    margin-top: 4px;
+}
+
+.explore .states-box {
+    width: 25%;
+    font-size: large;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.explore hr {
+    border-color: #213838;
 }
