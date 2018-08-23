@@ -36,6 +36,7 @@ namespace ParksService
 			*/
 	        services.AddSingleton<IParkService, ParkService>();
 	        services.AddSingleton<IParkRepository, ParkRepository>();
+	        services.AddSingleton<INpsService, NpsService>();
 
 	        services.AddAutoMapper();
 

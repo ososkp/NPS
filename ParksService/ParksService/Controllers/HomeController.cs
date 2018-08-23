@@ -7,13 +7,15 @@ using System.Linq;
 using AutoMapper;
 using ParksService.Data.Abstract.Repositories;
 using ParksService.Models;
+using ParksService.Services.Abstract;
 
 
 namespace ParksService.Controllers
 {
 	public class HomeController : BaseController
     {
-		public HomeController(IParkRepository parkRepository, IMapper mapper) : base(parkRepository, mapper)
+		public HomeController(IParkRepository parkRepository, INpsService npsService, IMapper mapper) 
+			: base(parkRepository, npsService, mapper)
 		{
 		}
 

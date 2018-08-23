@@ -16,9 +16,15 @@
             <h5>@Model.FullState</h5>
         </div>
         <br />
-        <button type="button" class="collapsible">Background</button>
-        <div id="description-collapse" class="content">
-            <p>@Model.Description</p>
+        
+        @* <button type="button" class="collapsible">Background</button> *@
+        @* <div id="description-collapse" class="content"> *@
+        @*     <p>@Model.Description</p> *@
+        @* </div> *@
+        <div class="description">
+            <p>
+                @Model.Description
+            </p>
         </div>
         <hr />
         <button type="button" class="collapsible">Getting There</button>

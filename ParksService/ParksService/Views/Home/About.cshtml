@@ -145,10 +145,10 @@
                     let div = $(`div[data-toggle-id=${attr}]`);
                     if (div.length) {
                         let items = $("div.inner").not(`#${div[0].id}`);
-                        items.hide(100);
+                        items.slideUp(150);
                     }
 
-                    div.is(":visible") ? div.hide(100) : div.show(150);
+                    div.is(":visible") ? div.slideUp(150) : div.slideDown(250);
                 });
         };
     </script>

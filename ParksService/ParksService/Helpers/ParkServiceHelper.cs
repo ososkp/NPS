@@ -79,5 +79,10 @@ namespace ParksService.Helpers
 		{
 			return FullState[state];
 		}
+
+	    public static IDictionary<string, string> GetStateDictionary()
+	    {
+			return FullState;
+	    }
 	}
 }

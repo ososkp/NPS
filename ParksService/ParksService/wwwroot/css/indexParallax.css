@@ -208,7 +208,8 @@ body {
     overflow: hidden; /* What to do if content overflows an element's box '*/
     position: relative; /* The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position */
     width: 100%;
-    background-image: url(https://www.nationalparks.org/sites/default/files/styles/wide_1x/public/arches_420020.JPG?itok=NYO7FOnk);
+    /* background-image: url(https://www.nationalparks.org/sites/default/files/styles/wide_1x/public/arches_420020.JPG?itok=NYO7FOnk); */
+    background-image: url("../images/arches.jpg");
     background-attachment: fixed; /* How an element acts when scrolling - fixed means it won't scroll with the page */
     background-size: cover; /* Cover: Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges */
     -moz-background-size: cover;
@@ -225,7 +226,8 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://www.nps.gov/yose/learn/news/images/28-September-2017-Horsetail-Fall-rockfall-overview.JPG);
+    /* background-image: url(https://www.nps.gov/yose/learn/news/images/28-September-2017-Horsetail-Fall-rockfall-overview.JPG); */
+    background-image: url("../images/yosemite.JPG");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -242,7 +244,8 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://www.ndtahq.com/wp-content/uploads/2017/05/DSC_0118.jpg);
+    /* background-image: url(https://www.ndtahq.com/wp-content/uploads/2017/05/DSC_0118.jpg); */
+    background-image: url("../images/vetsdc.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -259,7 +262,8 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg/1280px-Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg);
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg/1280px-Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg); */
+    background-image: url("../images/canyon.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -276,7 +280,8 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://www.brewsterbythesea.com/wp-content/uploads/trurolighthouse-20090506-0113.jpg);
+    /* background-image: url(https://www.brewsterbythesea.com/wp-content/uploads/trurolighthouse-20090506-0113.jpg); */
+    background-image: url("../images/capecod.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -293,7 +298,8 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://keywestseaplanecharters.com/img/slide-01.jpg);
+    /* background-image: url(https://keywestseaplanecharters.com/img/slide-01.jpg); */
+    background-image: url("../images/drytortuga.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;

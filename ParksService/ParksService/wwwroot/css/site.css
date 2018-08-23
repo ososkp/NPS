@@ -87,14 +87,21 @@ select {
 }
 
 .selected {
-    /* background-color: khaki !important; */
     background-color: #ede9ce !important;
     color: #041908 !important;
 }
 
-    .selected .table-link {
+    .selected .table-link:visited {
         color: forestgreen !important;
     }
+
+table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.dataTable tbody td.selected a {
+    color: #117cb1 !important;
+}
+
+.table-link:visited {
+    color: forestgreen !important;
+}
 
 .pagination > .active > a {
     background-color: #213838 !important;
@@ -141,8 +148,6 @@ select {
 
         /* Bootstrap Overrides */
 .navbar-inverse {
-    /* background-color: #093511 !important; */
-    /* border-color: #093511 !important; */
     background-color: #213838 !important;
     border-color: #213838 !important;
 }
@@ -216,7 +221,7 @@ select {
     color: #e7e93e !important;
     background-color: #041908 !important;
     border-color: #041908 !important;
-    outline-color: #041908 !important;
+    outline: none !important;
 }
 
 .btn:focus, .btn:active:focus {
@@ -269,17 +274,28 @@ select {
 }
 
 /* Collapsible Buttons for Details View */
+.description p {
+    margin: 9px 10px 10px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    text-align: justify;
+    font-size: 14px;
+}
+
 .collapsible {
-    background-color: #eee;
+    background-color: #e4e3e3;
     color: #444;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: center;
     outline: none;
+    text-align: center;
     font-size: 15px;
     border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c7c7c7;
 }
 
 .active {
@@ -303,11 +319,38 @@ select {
     border-radius: 2px;
 }
 
+.content p {
+    margin: 6px 6px 4px 6px;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+
 .bootbox-close-button {
     color: khaki;
 }
 
 /* Explore Page Customization */
+.explore hr {
+    border-color: #213838;
+}
+
+.explore h2 {
+    font-size: 36px;
+    text-align: right;
+    text-decoration: underline;
+}
+.explore h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    color: #213838;
+}
+
+.explore .indented-li {
+    margin-left: 16px;
+}
+
 .header-label {
     font-size: large;
     color: #213838;
@@ -324,6 +367,11 @@ select {
     padding-bottom: 13px;
 }
 
-.explore hr {
-    border-color: #213838;
+.search-results {
+    height: auto;
+    background-color: #efefef;
+    border: none;
+    box-shadow: none;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }

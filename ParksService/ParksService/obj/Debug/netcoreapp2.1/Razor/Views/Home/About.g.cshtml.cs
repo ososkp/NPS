@@ -76,12 +76,12 @@ using ParksService.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(120, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "824f4715a59840d4a6a6fdddb0af86d6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10aa07e81a2b43d78f1f50d000ebab2d", async() => {
                 BeginContext(126, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(132, 57, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "964ef0dd076f4bfcb6d651c6b382499a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4446dfadbb8d4df99eedae52acc42fcf", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -126,7 +126,7 @@ using ParksService.ViewModels;
             ");
             EndContext();
             BeginContext(677, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b16e6ac807774e3ca2bdc9cd3056e711", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd65d04e94544f02a796ee9f09fbb740", async() => {
                 BeginContext(754, 21, true);
                 WriteLiteral("National Park Service");
                 EndContext();
@@ -160,7 +160,7 @@ using ParksService.ViewModels;
                         <li>");
             EndContext();
             BeginContext(1192, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b79190ad4954776ad4bd4898a2cd014", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bdbc8f6fee114e45adf942e7afc3fa65", async() => {
                 BeginContext(1248, 5, true);
                 WriteLiteral("About");
                 EndContext();
@@ -186,7 +186,7 @@ using ParksService.ViewModels;
             WriteLiteral("</li>\r\n                        <li>");
             EndContext();
             BeginContext(1292, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54a81e9e322f4bd59f4ddf69395952d3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15e0663e0713466a9a32d1d64ab4e04e", async() => {
                 BeginContext(1350, 7, true);
                 WriteLiteral("Explore");
                 EndContext();
@@ -212,7 +212,7 @@ using ParksService.ViewModels;
             WriteLiteral("</li>\r\n                        <li>");
             EndContext();
             BeginContext(1396, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82e2e0e906ff40d7a1d386f079167b74", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2810b8809cb249b7b668b553235694bc", async() => {
                 BeginContext(1456, 9, true);
                 WriteLiteral("Directory");
                 EndContext();
@@ -238,7 +238,7 @@ using ParksService.ViewModels;
             WriteLiteral("</li>\r\n                        <li role=\"separator\" class=\"divider\"></li>\r\n                        <li><a href=\"#\">Separated link</a></li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>\r\n\r\n");
             EndContext();
             BeginContext(1716, 5088, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca6ae4650e8a4532ab016f5f685766b9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5684e3c276dc4e8d9e9a353798d78499", async() => {
                 BeginContext(1722, 3918, true);
                 WriteLiteral(@"
     <div id=""about-panel"">
@@ -318,7 +318,7 @@ using ParksService.ViewModels;
                 ");
                 EndContext();
                 BeginContext(5640, 55, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "76044f401edc43c3933cd371be41724f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "16a015b6434a4bf58141c965bc65d3a6", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
