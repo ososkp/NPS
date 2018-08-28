@@ -4,4 +4,5 @@ Practice/warmup project using MVC to learn how to pull JSON data from the web an
 Data is of US National Parks from the NPS at: https://developer.nps.gov/api/v1/
 (Note: API is inaccessible without a key)
 
-Not particularly useful in any way at the moment.
+V 0.1
+Most pages are now functional, though "Explore" is barebones. More pages will be added eventually. "About" pagealso needs to be tweaked to have more information.
