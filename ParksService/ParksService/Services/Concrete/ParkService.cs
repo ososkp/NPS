@@ -30,11 +30,6 @@ namespace ParksService.Services.Concrete
 			    .GetStateDictionary()
 			    .ToDictionary(kp => kp.Value, kp => kp.Key);
 
-		    fullStateDictionary.Add("US Virgin Islands", "VI");
-		    fullStateDictionary.Add("Washington DC", "DC");
-		    fullStateDictionary.Add("Washington D.C.", "DC");
-		    fullStateDictionary.Add("Washington, DC", "DC");
-
 		    var test = _parkRepository.Find(p => p.States == fullStateDictionary[state]).ToList();
 		    return _parkRepository.Find(p => p.States == fullStateDictionary[state]);
 	     }
@@ -42,6 +37,11 @@ namespace ParksService.Services.Concrete
 	    public IEnumerable<Park> GetParksByState(string state)
 	    {
 		    return _parkRepository.Find(p => p.States == state);
+	    }
+
+	    public IEnumerable<Park> GetParksByDesignation(string designation)
+	    {
+		    return _parkRepository.Find(p => p.Designation == designation);
 	    }
 	}
 }

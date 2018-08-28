@@ -146,7 +146,7 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
         border-color: #213838 !important;
     }
 
-        /* Bootstrap Overrides */
+/* Bootstrap Overrides */
 .navbar-inverse {
     background-color: #213838 !important;
     border-color: #213838 !important;
@@ -182,6 +182,10 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
     .dropdown-menu > li > a {
         color: #fdf9d0;
     }
+
+.dropdown-menu .dropdown-item {
+    color: #fdf9d0 !important;
+}
 
     .dropdown-menu > li > a:hover {
         color: #1d3131 !important;
@@ -351,6 +355,10 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
     margin-left: 16px;
 }
 
+.explore .indented-li a:visited {
+    color: forestgreen;
+}
+
 .header-label {
     font-size: large;
     color: #213838;
@@ -358,6 +366,7 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
 
 .explore .search-button {
     margin-top: 4px;
+    position: relative;
 }
 
 .explore .states-box {
@@ -374,4 +383,48 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
     box-shadow: none;
     font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
+}
+
+.button-div {
+    margin-right: 12px;
+}
+
+.match {
+    color: khaki;
+    background-color: #213838;
+    list-style: none;
+    border: none;
+    outline: none;
+    width: 25%;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.result {
+    border-bottom-style: inset;
+    border-bottom-color: #e2e2e2;
+}
+
+    .match:hover {
+        color: darkkhaki;
+        background-color: #041908;
+    }
+
+.match:active {
+    background-color: darkkhaki !important;
+    color: #041908 !important;
+}
+
+#autocomplete {
+    width: 25%;
+}
+
+.autocomplete-active {
+    background-color: darkkhaki !important;
+    color: #041908 !important;
+}
+
+.autocomplete-active:hover {
+    background-color: #bdb76b;
 }

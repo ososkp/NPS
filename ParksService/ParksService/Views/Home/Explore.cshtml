@@ -35,7 +35,7 @@
                         <li><a asp-area="" asp-controller="Home" asp-action="Explore">Explore</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Directory">Directory</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">NPS 2018</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">NPS 2018</a></li>
                     </ul>
                 </li>
             </ul>
@@ -44,24 +44,22 @@
 </nav>
 
 <body>
-    <div class="explore">
-        <div class="form-group">
-            <label class="header-label">Search Parks by State</label>
-            <input name="state" class="form-control states-box" list="states-list"/>
-            <datalist id="states-list">
-                @* Options populated from JS *@
-            </datalist>
-            <button class="btn btn-primary btn-lg search-button">Search</button>
-        </div>
-        <hr />
+    <div class="form-group">
+        <div class="explore">
+            <label for="autocomplete" class="header-label">Search Parks by State</label>
+            <button id="clear-results-button" class="btn btn-primary" style="float: right;">Clear Results</button>
+            <div id="autocomplete-container" class="form-group">
+                <input id="autocomplete" type="text" class="form-control" placeholder="Enter State Name" autofocus />
+            </div>
+            <hr />
+            <div class="search-results form-control">
                 @* Results populated from JS *@
-        <div class="search-results form-control">
-
+            </div>
         </div>
     </div>
 </body>
 
-
 @section scripts {
     <script type="text/javascript" src="~/Scripts/ExplorePageScripts.js"></script>
+    <script type="text/javascript" src="~/Scripts/Helpers/AutoCompleteModule.js"></script>
 }

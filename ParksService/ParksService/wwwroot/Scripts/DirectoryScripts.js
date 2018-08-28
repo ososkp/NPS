@@ -52,7 +52,7 @@
             processing: '<i class="fa fa-cog fa-spin fa-4x fa-fw"></i>'
         },
         rowId: "Id",
-        select: 'single',
+        select: "single",
         columns: [
             { data: "fullName" },
             { data: "states" },

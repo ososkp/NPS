@@ -9,5 +9,6 @@ namespace ParksService.Services.Abstract
 		Park GetParkById(Guid id);
 		IEnumerable<Park> GetParksByFullState(string state);
 		IEnumerable<Park> GetParksByState(string state);
+		IEnumerable<Park> GetParksByDesignation(string designation);
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using ParksService.ViewModels;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using AutoMapper;
 using ParksService.Data.Abstract.Repositories;

@@ -29,7 +29,7 @@
                         <li><a asp-area="" asp-controller="Home" asp-action="Explore">Explore</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Directory">Directory</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">NPS 2018</a></li>
                     </ul>
                 </li>
             </ul>
@@ -40,13 +40,14 @@
 <body>
     <div id="about-panel">
         <div class="labels container-fluid col-md-4 col-lg-2">
+            <button id="landing-button" data-toggle-id="landing" class="btn btn-info btn-lg btn-block row" autofocus>About this Site</button>
             <button id="about-button" data-toggle-id="about" class="btn btn-info btn-lg btn-block row">About the NPS</button>
             <button id="mission-button" data-toggle-id="mission" class="btn btn-info btn-lg btn-block row">The Mission</button>
             <button id="emblem-button" data-toggle-id="emblem" class="btn btn-info btn-lg btn-block row">The Emblem</button>
         </div>
 
-        <div id="frosted-pane" class="outer">
-            <div class="landing-page inner">
+        <div id="frosted-pane">
+            <div class="landing-page inner" data-toggle-id="landing">
                 <h4>
                     Welcome to my page for the National Park Service
                 </h4>
@@ -139,12 +140,14 @@
 
         var attachEventToButtons = function() {
 
-            $(".btn-info").on("click",
+            $(".btn-info, .btn-circle").on("click",
                 function() {
                     let attr = $(this).attr("data-toggle-id");
                     let div = $(`div[data-toggle-id=${attr}]`);
                     if (div.length) {
-                        let items = $("div.inner").not(`#${div[0].id}`);
+                        let items = attr === "landing"
+                            ? $("div.inner").not(".landing-page")
+                            : $("div.inner").not(`#${div[0].id}`);
                         items.slideUp(150);
                     }
 

@@ -103,21 +103,21 @@
     transition: .25s;
 }
 
-    .btn-info:hover {
+    .btn-info:hover, .btn-circle:hover {
         color: darkkhaki;
         background-color: #213838;
         border-color: #213838;
         outline-color: #213838 !important;
     }
 
-    .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
-        color: darkkhaki;
-        background-color: #213838;
-        border-color: #213838;
-        outline-color: #213838 !important;
-    }
+        .btn-info:active, .btn-info.active, .btn-circle:active, .open > .dropdown-toggle.btn-info {
+            color: darkkhaki;
+            background-color: #213838;
+            border-color: #213838;
+            outline-color: #213838 !important;
+        }
 
-    .btn-info:focus {
+    .btn-info:focus, .btn-circle:focus {
         color: darkkhaki !important;
         background-color: #041908 !important;
         border-color: #041908 !important;

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "a935dd75408d852a84a8e39802f4189a7ff9bf47"
+    "signature": "3522426dcf93034816ab0ff66679527356526434"
   },
   "compilationOptions": {
     "defines": [
@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
+          "NWebsec.AspNetCore.Middleware": "2.0.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
@@ -404,6 +405,35 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NWebsec.AspNetCore.Core/2.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NWebsec.AspNetCore.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NWebsec.AspNetCore.Core.dll": {}
+        }
+      },
+      "NWebsec.AspNetCore.Middleware/2.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "NWebsec.AspNetCore.Core": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NWebsec.AspNetCore.Middleware.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NWebsec.AspNetCore.Middleware.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3626,6 +3656,20 @@
       "sha512": "sha512-/VaEPsEgj3p5YPLLxbYc6rB8gYIPf+8wCWOAlAe3l/SP0DXcefZ58uJer1ToBKIpwbPN5LkgTXtvilze5UJoYQ==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "NWebsec.AspNetCore.Core/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rBzLHzTQx7X3vcLbhcHPVgNUALl1mb2zoiIqNw/M7z4lda7WkvMbsHrb4+hh1lZVgeYp4qZwDbO8gAoPdnXmrQ==",
+      "path": "nwebsec.aspnetcore.core/2.0.0",
+      "hashPath": "nwebsec.aspnetcore.core.2.0.0.nupkg.sha512"
+    },
+    "NWebsec.AspNetCore.Middleware/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5PN4h7BLS9b4Hz6own0L1DqVrhpDnUKQaHDJGgkZz2efvZ9YwfAPE1yW7hVCpzNjLBYG3EV3xXWwIg0M5mXZUA==",
+      "path": "nwebsec.aspnetcore.middleware/2.0.0",
+      "hashPath": "nwebsec.aspnetcore.middleware.2.0.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",
