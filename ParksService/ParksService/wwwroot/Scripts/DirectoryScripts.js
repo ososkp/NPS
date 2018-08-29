@@ -28,31 +28,11 @@
             }
         });
     };
-//
-//    var GetParkAddresses = function(data) {
-//        var addressData = new Array;
-//        var newAddress;
-//
-//        for (let i = 0; i < data.length; i++) {
-//            if (data[i].addresses[0]) {
-//                newAddress = data[i].addresses[0];
-//                newAddress.ParkId = data[i].id;
-//                addressData.push(newAddress);
-//            }
-//        }
-//        return addressData;
-//    }
 
     // Button press from view to call refresh
     $("#parks-button").click(function () {
         refreshParks();
     });
-
-    // Google Maps' search requires format "1.111111,2.222222" for coordinates
-    var getUrl = function (coords) {
-        var url = "http://maps.google.com/maps?q=";
-        return url + coords.replace(/[a-zA-Z]|:|\s/g, "");
-    };
 
     // Build table from LOCAL .json file
     // This table is also refreshed to read new .json file when refreshParks() is called

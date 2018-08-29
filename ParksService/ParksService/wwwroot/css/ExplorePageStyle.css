@@ -15,6 +15,14 @@
     color: #213838;
 }
 
+.explore h4 {
+    font-weight: 700;
+}
+
+.explore .address {
+    text-align: center;
+}
+
 .explore .indented-li {
     margin-left: 16px;
 }

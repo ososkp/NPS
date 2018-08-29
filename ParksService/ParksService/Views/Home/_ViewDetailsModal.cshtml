@@ -16,11 +16,7 @@
             <h5>@Model.FullState</h5>
         </div>
         <br />
-        
-        @* <button type="button" class="collapsible">Background</button> *@
-        @* <div id="description-collapse" class="content"> *@
-        @*     <p>@Model.Description</p> *@
-        @* </div> *@
+
         <div class="description">
             <p>
                 @Model.Description
@@ -30,6 +26,14 @@
         <button type="button" class="collapsible">Getting There</button>
         <div id="directions-collapse" class="content">
             <p>@Model.DirectionsInfo</p>
+            <br />
+            <div class="address">
+                <h4>Address:</h4>
+                @Model.Address.Line1 <br />
+                <div class='@Model.Address.Line2.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line2</div>
+                <div class='@Model.Address.Line3.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line3</div>
+                @Model.Address.City, @Model.Address.StateCode @Model.Address.PostalCode <br /><br />
+            </div>
         </div>
         <hr />
         <button type="button" class="collapsible">Weather</button>

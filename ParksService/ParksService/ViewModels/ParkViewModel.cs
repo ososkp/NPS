@@ -1,7 +1,8 @@
-// https://developer.nps.gov/api/v1/parks?api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
+// http://api.nps.gov/api/v1/parks?limit=500&fields=addresses&api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
 
 using System;
-using ParksService.ViewModels;
+using System.Collections.Generic;
+using ParksService.Models;
 
 namespace ParksService.ViewModels
 {
@@ -12,13 +13,12 @@ namespace ParksService.ViewModels
         public string States { get; set; }
         public string LatLong { get; set; }
         public string Designation { get; set; }
+		public Address Address { get; set; }
 
-        // Back-end
-        public string ParkCode { get; set; }
+		// Back-end
+		public string ParkCode { get; set; }
         public string Url { get; set; }
         public string DirectionsUrl { get; set; }
-		public string Latitude { get; set; }
-		public string Longitude { get; set; }
 
 		// Front-end
 		public string Description { get; set; }

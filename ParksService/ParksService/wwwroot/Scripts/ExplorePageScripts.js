@@ -14,27 +14,34 @@
     };
     AutoCompleteModule.init(myOptions);
 
-    var writeStateSearchResults = function(parks, state) {
+    var writeStateSearchResults = function (parks, state) {
         var div = $(".search-results");
         div.empty();
         div.append(`<h2>${state}</h2>`);
-        parks.forEach(function(park) {
+        parks.forEach(function (park) {
             div.append(
                 `<div class="result">
                     <h3>${park.fullName}</h3>
-                    <ul>
+                                        <ul>
                         <li>${park.description}</li>
                         <li class="indented-li"><a href="${park.url}" target="_blank" class="table-link">Website</a></li>
-                        <li class="indented-li"><a href="http://maps.google.com/maps?q=${park.latitude},${park.longitude}" 
+                        <li class="indented-li"><a href="${getUrl(park.latLong)}" 
                             target="_blank">Map</a></li>
                     </ul>
+                    <div class="address">
+                        <h4>Address:</h4>
+                        <p>${park.address.line1}</ p>
+                        <p>${park.address.line2}</ p>
+                        <p>${park.address.line3}</ p>
+                        <p>${park.address.city}, ${park.address.stateCode} ${park.address.postalCode} <br />
+                    </ div>
                 </div>`
             );
         });
         $(".states-box").val("");
     }
 
-    var populateStateSearchResults = function(state) {
+    var populateStateSearchResults = function (state) {
         $("#autocomplete").val("");
         $(".match").remove();
 

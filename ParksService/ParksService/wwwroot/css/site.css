@@ -255,6 +255,10 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
     border-color: #213838;
 }
 
+.address {
+    text-align: center;
+}
+
 /* Collapsible Buttons for Details View */
 .description p {
     margin: 9px 10px 10px;
@@ -310,5 +314,3 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
 .bootbox-close-button {
     color: khaki;
 }
-
-/* Explore Page Customization */

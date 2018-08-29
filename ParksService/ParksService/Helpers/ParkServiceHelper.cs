@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ParksService.Models;
 
 namespace ParksService.Helpers
 {
@@ -68,6 +69,23 @@ namespace ParksService.Helpers
 		    {"GU", "Guam" }
 	    };
 
+	    public static Address MapAddress(Park data)
+	    {
+		    if (data.Addresses.Count > 0)
+			    return data.Addresses[0];
+
+		    return new Address
+		    {
+			    City = "Nowhere",
+			    Line1 = "123 Placeholder Street",
+			    Line2 = "",
+			    Line3 = "",
+			    StateCode = "DC",
+			    PostalCode = "00000",
+			    Type = "Filler"
+		    };
+	    }
+
 		public static string GetFullState(string state)
 		{
 			return state.Length > STATE_CODE_LENGTH
@@ -80,14 +98,13 @@ namespace ParksService.Helpers
 			return FullState;
 	    }
 
-		private static string ParseMultipleStates(string state)
-		{
-			var states = state.Split(",").ToList();
-			var sb = new StringBuilder();
+	    private static string ParseMultipleStates(string state)
+	    {
+		    var states = state.Split(",").ToList();
+		    var sb = new StringBuilder();
 
-			states.ForEach(code => sb.Append(FullState[code] + ", "));
-			return sb.ToString().RemoveLastCharacter(0, 2);
-		}
-
-	}
+		    states.ForEach(code => sb.Append(FullState[code] + ", "));
+		    return sb.ToString().RemoveLastCharacter(0, 2);
+	    }
+    }
 }

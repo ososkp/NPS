@@ -54,13 +54,9 @@
             ["washington dc", "Washington, D.C."],
             ["us virgin islands", "U.S. Virgin Islands"],
             ["northern mariana islands", "Northern Mariana Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
-            ["us virgin islands", "U.S. Virgin Islands"],
+            ["american samoa", "American Samoa"],
+            ["guam", "Guam"],
+            ["puerto rico", "Puerto Rico"]
         ]);
     return {
         parksLocations: statesData

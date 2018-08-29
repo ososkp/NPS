@@ -18,7 +18,7 @@ var AutoCompleteModule = function () {
         let box = options.getInputBox();
         box.on("keyup", function (e) {
             if (!checkNavigationButton(this, e))
-                searchData(box.val());
+                searchData(box.val().toLowerCase());
         });
     };
 
@@ -71,7 +71,9 @@ var AutoCompleteModule = function () {
 
     var appendListItem = function (id, value) {
         $(`#${options.container}`)
-            .append(`<${options.elementType} class="${options.domClass} ${options.domClass}-${index}" id="${id}">${value}</${options.type}>`);  //
+            .append(`<${options.elementType} class="${options.domClass} ${options.domClass}-${index}" id="${id}">
+                        ${value}
+                    </${options.elementType}>`);
     };
 
     var attachEventToListItem = function (id, value) {
