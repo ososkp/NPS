@@ -1,0 +1,40 @@
+﻿@using ParksService.ViewModels
+@model IEnumerable<ParkViewModel>
+
+@{
+    ViewData["Title"] = "Explore Parks";
+}
+
+<style>
+    body {
+        font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+</style>
+
+<head>
+    <title>NPS Explore</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="~/css/ExplorePageStyle.css"/>
+</head>
+
+<body>
+    <div class="form-group">
+        <div class="explore">
+            <label for="autocomplete" class="header-label">Search Parks by State</label>
+            <button id="clear-results-button" class="btn btn-primary" style="float: right;">Clear Results</button>
+            <div id="autocomplete-container" class="form-group">
+                <input id="autocomplete" type="text" class="form-control" placeholder="Enter State Name" autofocus />
+            </div>
+            <hr />
+            <div class="search-results form-control">
+                @* Results populated from JS *@
+            </div>
+        </div>
+    </div>
+</body>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Helpers/SimplifiedStatesMap.js"></script>
+    <script type="text/javascript" src="~/Scripts/ExplorePageScripts.js"></script>
+    <script type="text/javascript" src="~/Scripts/Helpers/AutoCompleteModule.js"></script>
+}

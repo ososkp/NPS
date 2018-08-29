@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Park Directory";
+}
+
+<head>
+    <title>NPS Directory</title>
+</head>
+
+<div class="container">
+    <button id="parks-button" class="btn btn-primary btn-sm">Refresh Parks List</button>
+    <br />
+    <br />
+    <div class="row">
+        <table id="parks-table" class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>State</td>
+                    <td>Designation</td>
+                    <td>Map</td>
+                    <td>Website</td>
+                    <td>Details</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/DirectoryScripts.js"></script>
+}
