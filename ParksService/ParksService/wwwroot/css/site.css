@@ -1,18 +1,11 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
-body {
+.body-content {
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
-/* Wrapping element */
-
-/* Set some basic padding to keep content from hitting the edges */
-
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+button:focus { outline-color: #bdb76b !important; }
 
 /* My Overrides*/
 html, body {
@@ -23,122 +16,22 @@ body {
     background-color: #efefef;
 }
 
-/* Datatables Overrides */
-
-.sorting,
-.sorting_asc,
-.sorting_desc {
-    background-color: #213838;
-    color: #e7e93e;
-}
-
-#parks-table {
-    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: small;
-}
-
-.dataTables_length {
-    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.dataTables_filter { font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-.dataTables_filter input {
-    font-size: 14px;
-    outline: none;
-    box-shadow: none;
-}
-
-.dataTables_filter input:focus { box-shadow: 0 0 3pt 2pt #213838; }
-
-div.dataTables_wrapper div.dataTables_info {
-    padding-top: 0.85em;
-    white-space: nowrap;
-    padding-bottom: 11px;
-    padding-left: 21px;
-    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-select {
-    border-radius: 6px;
-    outline: none;
-}
-
-.selected {
-    background-color: #ede9ce !important;
-    color: #041908 !important;
-}
-
-    .selected .table-link:visited {
-        color: forestgreen !important;
-    }
-
-table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.dataTable tbody td.selected a {
-    color: #117cb1 !important;
-}
-
-.table-link:visited {
-    color: forestgreen !important;
-}
-
-.pagination > .active > a {
-    background-color: #213838 !important;
-    border-color: #213838 !important;
-    color: #e7e93e !important;
-}
-
-    .pagination > .active > a:focus {
-        background-color: #041908 !important;
-        border-color: #041908 !important;
-        color: #e7e93e !important;
-    }
-
-        .pagination > .active > a:focus:active {
-            border-color: #213838 !important;
-        }
-
-
-.pagination > li > a:focus {
-    border-color: #213838 !important;
-    outline-color: #213838 !important;
-}
-
-
-.pagination > .active > a:hover {
-    background-color: darkkhaki !important;
-    color: #213838 !important;
-    border-color: #041908 !important;
-}
-
-.pagination > li > a {
-    color: #213838 !important;
-}
-
-    .pagination > li > a:hover {
-        border-color: #213838 !important;
-        color: #213838 !important;
-    }
-
-    .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
-        color: #213838 !important;
-        border-color: #213838 !important;
-    }
-
 /* Bootstrap Overrides */
-.navbar-inverse {
+.navbar-dark {
     background-color: #213838 !important;
     border-color: #213838 !important;
 }
 
-    .navbar-inverse .navbar-brand {
+    .navbar-dark .navbar-brand {
         color: #fdf9d0; /* Text color for site title*/
-        font-size: 24px;
+        font-size: 26px;
         font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
         letter-spacing: 9px;
     }
 
-    .navbar-inverse .navbar-nav > li > a {
+    .navbar-dark .navbar-nav > li > a {
         color: #fdf9d0;
+        font-size: 16px;
     }
 
 .navbar-nav {
@@ -154,25 +47,35 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
 }
 
 .dropdown-menu {
-    background-color: #1d3131;
+    background-color: #213838;
 }
 
     .dropdown-menu > li > a {
         color: #fdf9d0;
     }
 
-.dropdown-menu .dropdown-item {
+.dropdown-menu .nav-link {
     color: #fdf9d0 !important;
 }
 
-    .dropdown-menu > li > a:hover {
+    .nav-link:hover {
         color: #1d3131 !important;
         background-color: #fdf9d0;
     }
-    .dropdown-menu > li > a:focus {
+.nav-link:focus {
         color: #1d3131 !important;
         outline-color: darkkhaki !important;
     }
+
+.btn:focus, .btn:active {
+    box-shadow: 0 0 0 0.2rem #bdb76b;
+    box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
+}
+
+.btn:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, .show > .btn.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #bdb76b;
+    box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
+}
 
 .btn-primary,
 .btn-primary:visited {
@@ -199,118 +102,28 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
     outline-color: #213838 !important;
 }
 
-.btn-primary:focus {
-    color: #e7e93e !important;
-    background-color: #041908 !important;
-    border-color: #041908 !important;
-    outline: none !important;
-}
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+        color: #e7e93e;
+        background-color: #213838;
+        border-color: #213838;
+        outline-color: #213838 !important;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:active:focus {
+        color: #e7e93e !important;
+        background-color: #041908 !important;
+        border-color: #041908 !important;
+        outline: none !important;
+    }
 
 .btn:focus, .btn:active:focus {
     outline-color: #213838 !important;
 }
 
 .form-control:focus {
+    box-shadow: 0 0 0 0.2rem #bdb76b;
+    box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
     border-color: #213838;
 }
 
-/* Details View Popup */
-#view-details {
-    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-    #view-details hr {
-        border-color: #213838;
-    }
-
-#details-header {
-    background-color: #041908;
-    color: khaki;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: -34px;
-    margin-bottom: -12px;
-    border-color: #213838;
-    padding: 11px;
-    text-align: center;
-    border-radius: 2px;
-}
-
-#details-header h3 {
-    letter-spacing: 4px;
-}
-
-.modal-body {
-    background-color: #efefef;
-    color: #041908;
-}
-
-.modal-content {
-    background-color: #213838;
-}
-
-.modal-footer {
-    background-color: darkkhaki;
-    color: #213838;
-    border-color: #213838;
-}
-
-.address {
-    text-align: center;
-}
-
-/* Collapsible Buttons for Details View */
-.description p {
-    margin: 9px 10px 10px;
-    letter-spacing: 1px;
-    line-height: 28px;
-    text-align: justify;
-    font-size: 14px;
-}
-
-.collapsible {
-    background-color: #e4e3e3;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #c7c7c7;
-}
-
-.active {
-    background-color: #aaaaaa !important;
-    color: #000000;
-    border-style: inset;
-    border-width: thin;
-}
-
-    .active, .collapsible:hover {
-        background-color: #ccc;
-    }
-
-.content {
-    padding: 0 18px;
-    background-color: #e4e4e4;
-    color: black;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    border-radius: 2px;
-}
-
-.content p {
-    margin: 6px 6px 4px 6px;
-    letter-spacing: 1px;
-    line-height: 23px;
-}
-
-.bootbox-close-button {
-    color: khaki;
-}

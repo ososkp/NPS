@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ParksService.Models;
 
 namespace ParksService.Helpers
 {
-    public static class ParkServiceHelper
+	public static class ParkServiceHelper
     {
 		private const int STATE_CODE_LENGTH = 2;
 		private static readonly IDictionary<string, string> FullState = new Dictionary<string, string>()
@@ -76,13 +75,13 @@ namespace ParksService.Helpers
 
 		    return new Address
 		    {
-			    City = "Nowhere",
-			    Line1 = "123 Placeholder Street",
+			    City = "",
+			    Line1 = "Not Listed",
 			    Line2 = "",
 			    Line3 = "",
-			    StateCode = "DC",
-			    PostalCode = "00000",
-			    Type = "Filler"
+			    StateCode = "",
+			    PostalCode = "",
+			    Type = ""
 		    };
 	    }
 

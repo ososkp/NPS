@@ -43,7 +43,24 @@ namespace ParksService.Services.Concrete
 		    return _unitOfWork.ParkRepository.Find(p => p.Designation == designation);
 	    }
 
-	    public IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data)
+	    public IEnumerable<Park> GetParksByGeneralDesignation(string designation)
+	    {
+		    return designation.Equals("historical site")
+			    ? _unitOfWork.ParkRepository.Find(p =>
+				    p.Designation.IndexOf("Historic", StringComparison.OrdinalIgnoreCase) >= 0
+				    || p.Designation.IndexOf("Historical", StringComparison.OrdinalIgnoreCase) >= 0
+				    || p.Designation.IndexOf("Battlefield", StringComparison.OrdinalIgnoreCase) >= 0
+				    || p.Designation.IndexOf("Memorial", StringComparison.OrdinalIgnoreCase) >= 0
+				    || p.Designation.IndexOf("Heritage", StringComparison.OrdinalIgnoreCase) >= 0)
+				    .OrderBy(p => p.States)
+				: _unitOfWork.ParkRepository.Find(p =>
+				    p.Designation == designation
+				    || (p.Designation.IndexOf(designation.Split()[0], StringComparison.OrdinalIgnoreCase) >= 0
+				        && p.Designation.IndexOf(designation.Split()[1], StringComparison.OrdinalIgnoreCase) >= 0))
+				    .OrderBy(p => p.States);
+	    }
+
+		public IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data)
 	    {
 			WriteParks(data);
 		    return GetAll();

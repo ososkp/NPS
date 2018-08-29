@@ -6,9 +6,7 @@
 }
 
 <style>
-    body {
-        font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+    
 </style>
 
 <head>
@@ -20,14 +18,38 @@
 <body>
     <div class="form-group">
         <div class="explore">
-            <label for="autocomplete" class="header-label">Search Parks by State</label>
-            <button id="clear-results-button" class="btn btn-primary" style="float: right;">Clear Results</button>
-            <div id="autocomplete-container" class="form-group">
-                <input id="autocomplete" type="text" class="form-control" placeholder="Enter State Name" autofocus />
+            <button id="clear-results-button" class="btn btn-primary" style="float: right;">Start Over</button>
+            <div class="explore-state">
+                <label for="autocomplete" class="header-label">Search Parks by State or Territory</label>
+                <div id="autocomplete-container" class="form-group">
+                    <input id="autocomplete" type="text" class="form-control" placeholder="Enter State Name" autofocus/>
+                </div>
+                <hr/>
+                <div class="search-results form-control">
+                    @* Results populated from JS *@
+                </div>
             </div>
-            <hr />
-            <div class="search-results form-control">
-                @* Results populated from JS *@
+
+            <div class="explore-designation">
+                <label class="header-label">Search Parks by Designation</label>
+                <div id="designation-image-row" class="card-deck">
+                    <div class="card text-center bg-dark">
+                        <img src="~/images/national-parks-search.jpg" class="card-img-top" alt="National Parks"/>
+                        <div class="card-body"><button id="national-park" class="btn btn-link">National Parks</button></div>
+                    </div>
+                    <div class="card text-center bg-dark">
+                        <img src="~/images/national-monuments-search.jpg" class="card-img-top" alt="National Monuments"/>
+                        <div class="card-body"><button id="national-monument" class="btn btn-link">National Monuments</button></div>
+                    </div>
+                    <div class="card text-center bg-dark">
+                        <img src="~/images/historical-search.jpg" class="card-img-top" alt="Historical Sites"/>
+                        <div class="card-body"><button id="historical-site" class="btn btn-link">Historical Sites</button></div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="designation-search-results form-control">
+                    @* Results populated from JS *@
+                </div>
             </div>
         </div>
     </div>

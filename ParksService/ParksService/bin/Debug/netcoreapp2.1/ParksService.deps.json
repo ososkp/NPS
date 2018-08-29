@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "3522426dcf93034816ab0ff66679527356526434"
+    "signature": "7b7ded9e70bb6a86639d2764c401c3c72839094a"
   },
   "compilationOptions": {
     "defines": [
@@ -29,7 +29,8 @@
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
           "NWebsec.AspNetCore.Middleware": "2.0.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "11.0.2",
+          "bootstrap": "4.1.3"
         },
         "runtime": {
           "ParksService.dll": {}
@@ -67,6 +68,13 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "bootstrap/4.1.3": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.14.0"
+        }
+      },
+      "jQuery/3.0.0": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -436,6 +444,7 @@
           "lib/netstandard2.0/NWebsec.AspNetCore.Middleware.dll": {}
         }
       },
+      "popper.js/1.14.0": {},
       "System.Composition/1.0.31": {
         "dependencies": {
           "System.Composition.AttributedModel": "1.0.31",
@@ -3531,6 +3540,20 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
     },
+    "bootstrap/4.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eyaT3ZkeOGyj3qXmQJziQNyh+bYzNKtx9QrxETNgzqOxWvsvNoGrAr03426N7AMG+VJayKWtjg4FpGYmPhyuTg==",
+      "path": "bootstrap/4.1.3",
+      "hashPath": "bootstrap.4.1.3.nupkg.sha512"
+    },
+    "jQuery/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
+      "path": "jquery/3.0.0",
+      "hashPath": "jquery.3.0.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3670,6 +3693,13 @@
       "sha512": "sha512-5PN4h7BLS9b4Hz6own0L1DqVrhpDnUKQaHDJGgkZz2efvZ9YwfAPE1yW7hVCpzNjLBYG3EV3xXWwIg0M5mXZUA==",
       "path": "nwebsec.aspnetcore.middleware/2.0.0",
       "hashPath": "nwebsec.aspnetcore.middleware.2.0.0.nupkg.sha512"
+    },
+    "popper.js/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SPxZdXknelgQ015wey7GMZvsVdt/SyEmHYORhEp5k/uF9MUk9DPtkn+6dR98fud2hVWJjZm9KKr474+r7WQt+A==",
+      "path": "popper.js/1.14.0",
+      "hashPath": "popper.js.1.14.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

@@ -1,4 +1,13 @@
-﻿.explore hr {
+﻿body {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.body-content {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.explore hr {
     border-color: #213838;
 }
 
@@ -6,6 +15,7 @@
     font-size: 36px;
     text-align: right;
     text-decoration: underline;
+    text-transform: capitalize;
 }
 .explore h3 {
     font-size: 24px;
@@ -13,10 +23,20 @@
     text-decoration: underline;
     letter-spacing: 1px;
     color: #213838;
+    line-height: 36px;
+    margin-top: 2px;
 }
 
 .explore h4 {
     font-weight: 700;
+}
+
+.explore .hang-right {
+    font-size: 18px;
+    color: #7a8086 !important;
+    text-align: right;
+    margin-right: 8px;
+    line-height: 1px;
 }
 
 .explore .address {
@@ -48,7 +68,8 @@
     padding-bottom: 13px;
 }
 
-.search-results {
+.search-results,
+.designation-search-results {
     height: auto;
     background-color: #efefef;
     border: none;
@@ -99,4 +120,26 @@
 
 .autocomplete-active:hover {
     background-color: #bdb76b;
+}
+
+.btn-link:focus, .btn-link:active {
+    box-shadow: none !important;
+}
+
+#clear-results-button {
+    display: none;
+}
+
+/* Designation Cards */
+.card-body {
+    background-color: #213838;
+}
+.card-body .btn-link {
+    font-size: 20px;
+    color: #fdf9d0;
+    letter-spacing: 6px;
+}
+
+.card-deck {
+    margin-top: 11px;
 }

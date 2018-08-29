@@ -11,6 +11,7 @@ namespace ParksService.Services.Abstract
 		IEnumerable<Park> GetParksByFullState(string state);
 		IEnumerable<Park> GetParksByState(string state);
 		IEnumerable<Park> GetParksByDesignation(string designation);
+		IEnumerable<Park> GetParksByGeneralDesignation(string designation);
 		IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data);
 		void WriteParks(IEnumerable<Park> data);
 	}

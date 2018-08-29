@@ -1,8 +1,14 @@
 ﻿body {
-    /* background-image: url(https://img.huffingtonpost.com/asset/5a60f9351f00003c00db9681.jpeg?cache=n6hjxccivo&ops=1910_1000); */
     background-image: url("../images/arrowheadwall.jpg");
     background-size: cover;
     background-color: #242424;
+}
+
+#about-panel {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #about-panel p {
@@ -35,10 +41,9 @@
 
 #frosted-pane {
     background-color: #242424;
-    float: left;
-    width: 100%;
+    width: 90%;
     height: 615px;
-    margin: 5px;
+    margin: 0 auto;
     opacity: .97;
     border-radius: 5px;
     z-index: 0;
@@ -68,7 +73,6 @@
     float: left;
     z-index: 1;
     position: absolute;
-    margin-left: -80px;
     margin-top: 15px;
 }
 
@@ -101,7 +105,16 @@
     white-space: normal;
     font-weight: 700;
     transition: .25s;
+    font-size: 16px;
 }
+
+    .btn-info:active {
+        color: darkkhaki !important;
+        background-color: #041908 !important;
+        border-color: #041908 !important;
+        outline-color: #041908 !important;
+        box-shadow: none;
+    }
 
     .btn-info:hover, .btn-circle:hover {
         color: darkkhaki;
@@ -122,10 +135,15 @@
         background-color: #041908 !important;
         border-color: #041908 !important;
         outline-color: #041908 !important;
+        box-shadow: none;
     }
 
 .btn:focus, .btn:active:focus {
     outline-color: #213838 !important;
+}
+
+.btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus, .show > .btn-info.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem darkkhaki;
 }
 
 .landing-page p {

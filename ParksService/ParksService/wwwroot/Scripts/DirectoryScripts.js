@@ -70,7 +70,8 @@
             {
                 "defaultContent": "<button class=\"btn btn-primary\">View Details</button>"
             }
-        ]
+        ],
+        pageLength: 50
     });
 
     // When a user clicks on "View Details" button, show partial view popup with details
