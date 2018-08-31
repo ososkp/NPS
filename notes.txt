@@ -1,1 +1,0 @@
-Migrated to Bootstrap 4, made necessary changes to css and _Layout, and implemented a "search by designation" option on the Explore page.

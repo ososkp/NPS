@@ -13,6 +13,6 @@ namespace ParksService.Services.Abstract
 		IEnumerable<Park> GetParksByDesignation(string designation);
 		IEnumerable<Park> GetParksByGeneralDesignation(string designation);
 		IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data);
-		void WriteParks(IEnumerable<Park> data);
+		void WriteData(IEnumerable<Park> data);
 	}
 }

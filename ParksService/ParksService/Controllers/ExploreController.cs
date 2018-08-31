@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ParksService.Services.Abstract;
@@ -20,7 +21,16 @@ namespace ParksService.Controllers
 			return View(viewModel);
         }
 
-	    public IActionResult GetParksByState(string state)
+	    [HttpGet]
+	    public IActionResult VisitorDetails(Guid id)
+	    {
+		    var park = _parkService.GetParkById(id);
+		    var viewModel = _mapper.Map<ParkViewModel>(park);
+
+		    return PartialView("_ExploreVisitorDetailsModal", viewModel);
+	    }
+
+		public IActionResult GetParksByState(string state)
 	    {
 		    var data = _parkService.GetParksByFullState(state);
 		    var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(data);

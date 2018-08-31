@@ -5,19 +5,21 @@
         $.ajax({
             url: "https://developer.nps.gov/api/v1/parks",
             data: {
-                limit: 500,
-                fields: "addresses",
-                api_key: "5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs"
+                limit: 498,
+                fields: "addresses,entranceFees",
+                api_key: "5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs",
+                sort: "-name"
             },
             type: "GET",
             dataType: "JSON",
             success: function (data) {
+                console.log(data);
                 var parks = JSON.stringify(data.data);
                 $.ajax({
                     type: "POST",
                     url: "/Home/PopulateParks",
                     data: parks,
-                    dataType: "json",
+                    dataType: "JSON",
                     contentType: "application/json; charset=utf-8",
                     complete: function () {
                         $("#parks-table").DataTable().ajax.reload();
@@ -85,18 +87,19 @@
 
             $.get(url,
                 function (data) {
-                    bootbox.dialog({
-                        title: null,
-                        message: data,
-                        buttons: {
-                            main: {
-                                label: "Okay",
-                                className: "btn-primary",
-                                callback: function () { }
-                            }
-                        },
-                        className: "modal-large"
-                    });
+                    bootBoxModal(data);
+//                    bootbox.dialog({
+//                        title: null,
+//                        message: data,
+//                        buttons: {
+//                            main: {
+//                                label: "Okay",
+//                                className: "btn-primary",
+//                                callback: function () { }
+//                            }
+//                        },
+//                        className: "modal-large"
+//                    });
                 });
         });
 });

@@ -3,6 +3,11 @@
     margin-top: 20px;
 }
 
+.body-content {
+    margin-top: 20px !important;
+}
+
+
 /* Datatables Overrides */
 
 .sorting,

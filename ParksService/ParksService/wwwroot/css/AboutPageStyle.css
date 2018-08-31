@@ -4,13 +4,6 @@
     background-color: #242424;
 }
 
-#about-panel {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 #about-panel p {
     margin-left: 25px;
     margin-right: 20px;
@@ -41,7 +34,7 @@
 
 #frosted-pane {
     background-color: #242424;
-    width: 90%;
+    width: 100%;
     height: 615px;
     margin: 0 auto;
     opacity: .97;
@@ -54,7 +47,7 @@
      color: khaki; 
      background-color: #262625; 
      height: 575px; 
-     width: 79%; 
+     width: 76%; 
      opacity: .8 !important; 
      margin-top: 20px; 
      margin-left: 62px; 
@@ -74,6 +67,7 @@
     z-index: 1;
     position: absolute;
     margin-top: 15px;
+    margin-left: -55px;
 }
 
 #about-intro {

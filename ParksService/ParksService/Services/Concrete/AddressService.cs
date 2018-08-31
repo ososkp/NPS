@@ -26,9 +26,9 @@ namespace ParksService.Services.Concrete
 			return _unitOfWork.AddressRepository.Find(a => a.PostalCode == code);
 		}
 
-		public void WriteAddresses(IEnumerable<Address> data)
+		public void WriteData(IEnumerable<Address> data)
 		{
-			_unitOfWork.AddressRepository.WriteAddresses(data);
+			_unitOfWork.AddressRepository.WriteData(data);
 		}
 
 	}

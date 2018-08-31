@@ -16,7 +16,7 @@ namespace ParksService.Services.Concrete
 
 		public IEnumerable<Park> GetAll()
 	    {
-		    return _unitOfWork.ParkRepository.GetAll();
+			    return _unitOfWork.ParkRepository.GetAll();
 	    }
 
 	    public Park GetParkById(Guid id)
@@ -62,13 +62,13 @@ namespace ParksService.Services.Concrete
 
 		public IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data)
 	    {
-			WriteParks(data);
+			WriteData(data);
 		    return GetAll();
 		}
 
-	    public void WriteParks(IEnumerable<Park> data)
+	    public void WriteData(IEnumerable<Park> data)
 	    {
-		    _unitOfWork.ParkRepository.WriteParks(data);
+		    _unitOfWork.ParkRepository.WriteData(data);
 	    }
     }
 }

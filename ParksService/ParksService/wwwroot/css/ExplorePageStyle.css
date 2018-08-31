@@ -2,11 +2,6 @@
     font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.body-content {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
 .explore hr {
     border-color: #213838;
 }
@@ -24,36 +19,29 @@
     letter-spacing: 1px;
     color: #213838;
     line-height: 36px;
-    margin-top: 2px;
+    margin-top: 20px;
 }
 
 .explore h4 {
     font-weight: 700;
+    font-size: 1.3rem;
 }
 
-.explore .hang-right {
+.explore .state-listing {
     font-size: 18px;
     color: #7a8086 !important;
-    text-align: right;
-    margin-right: 8px;
     line-height: 1px;
+    padding-top: 7px;
 }
 
-.explore .address {
-    text-align: center;
-}
-
-.explore .indented-li {
-    margin-left: 16px;
-}
-
-.explore .indented-li a:visited {
+.explore a:visited {
     color: forestgreen;
 }
 
 .header-label {
-    font-size: large;
+    font-size: larger;
     color: #213838;
+    font-weight: 700;
 }
 
 .explore .search-button {
@@ -96,7 +84,18 @@
 
 .result {
     border-bottom-style: inset;
-    border-bottom-color: #e2e2e2;
+    border-bottom-color: #676767;
+}
+
+    .result hr {
+        width: 80%;
+        border-color: #bcbaba;
+    }
+
+.description {
+    text-align: justify;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .match:hover {
@@ -135,9 +134,9 @@
     background-color: #213838;
 }
 .card-body .btn-link {
-    font-size: 20px;
     color: #fdf9d0;
-    letter-spacing: 6px;
+    white-space: normal;
+    letter-spacing: 3px;
 }
 
 .card-deck {

@@ -12,11 +12,8 @@ namespace ParksService.Controllers
 {
 	public class HomeController : BaseController
     {
-	    private readonly IAddressService _addressService;
-
-	    public HomeController(IAddressService addressService, IParkService parkService, IMapper mapper) : base(parkService, mapper)
+	    public HomeController(IParkService parkService, IMapper mapper) : base(parkService, mapper)
 	    {
-		    _addressService = addressService;
 	    }
 
         public IActionResult Index()
@@ -31,6 +28,12 @@ namespace ParksService.Controllers
 		    var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
 
 			return Json(new {viewModel});
+	    }
+
+	    [HttpGet]
+	    public Park GetParkById(Guid id)
+	    {
+		    return _parkService.GetParkById(id);
 	    }
 
 	    [HttpPost]

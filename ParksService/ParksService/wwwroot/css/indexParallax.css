@@ -35,7 +35,7 @@ footer p {
 /* Typography */
 /**************************/
 #nps-parallax h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
@@ -54,7 +54,7 @@ footer p {
     font-weight: 400;
     text-transform: uppercase;
     z-index: 10; /* Specifies stack order of an element (Bring to front, send to back etc) */
-    opacity: .8;
+    opacity: .7 !important;
 }
 
 #nps-parallax h3 {
@@ -74,12 +74,13 @@ footer p {
     font-weight: 700;
     letter-spacing: 1px;
     color: #3b8595;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#nps-parallax p {
-    font-family: 'Open Sans', sans-serif;
+#nps-parallax p, ul {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
 }
 
@@ -133,12 +134,13 @@ footer p {
 body {
     background-color: #1b2b2b !important;
     font-family: 'Open Sans', sans-serif;
+    margin-top: 32px;
 }
 
 /* Section - Title */
 /**************************/
 #nps-parallax .title {
-    background-color: darkkhaki;
+    background-color: #1c2f2f;
     padding: 60px;
     margin: 0 auto;
     text-align: center;
@@ -148,22 +150,25 @@ body {
     border-bottom-color: #bdb76b;
     border-left-style: double;
     border-right-style: double;
+    box-shadow: 1px 1px 0 5px #929076;
 }
 
     #nps-parallax .title h1 {
-        color: #213838 !important;
+        color: #fdf9d0 !important;
         font-size: 35px;
         letter-spacing: 8px;
+        text-shadow: 4px 4px #041908 !important;
+        line-height: 76px;
     }
 
     #nps-parallax .title h3 {
-        color: #213838 !important;
+        color: #fdf9d0 !important;
     }
 
         /* Section - Block */
         /**************************/
 #nps-parallax .block {
-    background-color: #fdf9d0;
+    background-color: #dedbb8;
     padding: 60px;
     width: 100% !important;
     margin: 0 auto;
@@ -311,7 +316,6 @@ body {
     border-bottom-style: outset;
     border-bottom-color: #fdf9d0;
 }
-
 
 /* Extras */
 /**************************/

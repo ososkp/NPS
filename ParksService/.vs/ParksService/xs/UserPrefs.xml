@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{C6FC55AD-0DE0-4491-9817-553F57D507FA}|Default">
+  <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/wwwroot/css/AboutPageStyle.css">
+    <Files>
+      <File FileName="ParksService/wwwroot/css/AboutPageStyle.css" Line="2" Column="51" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
