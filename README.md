@@ -9,3 +9,6 @@ Most pages are now functional, though "Explore" is barebones. More pages will be
 
 V 0.2
 About page is more complete, and Exlpore page's functionality is improved. API call now receives full list of parks along with addresses. AutoCompleteModule implemented.
+
+V 0.3
+I found an error with the API. I can't make requests for operatingHours, images or contacts unless I severely limit the quantity of park datapoints I get - down to somewhere around 350. For now I'm just getting all 498 and not using the aforementioned data. Classes for images and operatingHours are written, though.
