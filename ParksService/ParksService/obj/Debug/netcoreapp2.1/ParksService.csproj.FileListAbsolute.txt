@@ -39,7 +39,6 @@ C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/Ra
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.pdb
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.Views.dll
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.Views.pdb
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojResolveAssemblyReference.cache
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CoreCompileInputs.cache
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorAssemblyInfo.cache
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorAssemblyInfo.cs
@@ -66,3 +65,4 @@ C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/Ra
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.dll
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.pdb
 /Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CopyComplete
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojAssemblyReference.cache

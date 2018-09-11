@@ -23,4 +23,8 @@
     <Folder Include="bin\Debug\netcoreapp2.1\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\Scripts\DataAccessScripts.js" />
+    <Content Remove="wwwroot\Scripts\DirectoryScripts.js" />
+  </ItemGroup>
 </Project>

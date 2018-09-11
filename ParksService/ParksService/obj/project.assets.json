@@ -12504,12 +12504,6 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.1.0",
-            "autoReferenced": true
-          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "5.0.1"
@@ -12534,6 +12528,12 @@
           "NWebsec.AspNetCore.Middleware": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.1.0",
+            "autoReferenced": true
           }
         },
         "imports": [

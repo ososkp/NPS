@@ -1,8 +1,13 @@
 ﻿<Properties StartupConfiguration="{C6FC55AD-0DE0-4491-9817-553F57D507FA}|Default">
   <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/wwwroot/css/AboutPageStyle.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Views/Home/Explore.cshtml">
     <Files>
-      <File FileName="ParksService/wwwroot/css/AboutPageStyle.css" Line="2" Column="51" />
+      <File FileName="ParksService/Views/Home/Explore.cshtml" Line="5" Column="33" />
+      <File FileName="ParksService/wwwroot/Scripts/ExplorePageScripts.js" Line="9" Column="46" />
+      <File FileName="ParksService/wwwroot/Scripts/Helpers/AutoCompleteModule.js" Line="47" Column="21" />
+      <File FileName="ParksService/web.config" Line="1" Column="1" />
+      <File FileName="ParksService/Views/Home/About.cshtml" Line="1" Column="1" />
+      <File FileName="ParksService/Views/Home/Index.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
