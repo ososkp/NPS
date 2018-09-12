@@ -7,9 +7,7 @@
     margin-top: 20px !important;
 }
 
-
 /* Datatables Overrides */
-
 .sorting,
 .sorting_asc,
 .sorting_desc {
@@ -136,106 +134,4 @@ table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.
     outline: 0;
     box-shadow: 0 0 0 0.2rem #bdb76b;
     box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
-}
-
-/* Details View Popup */
-#view-details {
-    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#view-details hr {
-    border-color: #213838;
-}
-
-#details-header {
-    background-color: #041908;
-    color: khaki;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: -34px;
-    margin-bottom: -12px;
-    border-color: #213838;
-    padding: 11px;
-    text-align: center;
-    border-radius: 2px;
-}
-
-#details-header h3 {
-    letter-spacing: 4px;
-}
-
-.modal-body {
-    background-color: #efefef;
-    color: #041908;
-}
-
-.modal-content {
-    background-color: #213838;
-}
-
-.modal-footer {
-    background-color: darkkhaki;
-    color: #213838;
-    border-color: #213838;
-}
-
-.address {
-    text-align: center;
-}
-
-/* Collapsible Buttons for Details View */
-.description p {
-    margin: 9px 10px 10px;
-    letter-spacing: 1px;
-    line-height: 28px;
-    text-align: justify;
-    font-size: 14px;
-}
-
-.collapsible {
-    background-color: #e4e3e3;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #c7c7c7;
-}
-
-.active, .active:focus {
-    background-color: #aaaaaa !important;
-    color: #000000;
-    border-style: inset;
-    border-width: thin;
-    outline: none;
-}
-
-.active, .collapsible:hover {
-    background-color: #ccc;
-}
-
-.content {
-    padding: 0 18px;
-    background-color: #e4e4e4;
-    color: black;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    border-radius: 2px;
-}
-
-.content p {
-    margin: 6px 6px 4px 6px;
-    letter-spacing: 1px;
-    line-height: 23px;
-}
-
-.bootbox-close-button {
-    color: khaki;
 }

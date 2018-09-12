@@ -26,5 +26,6 @@
   <ItemGroup>
     <Content Remove="wwwroot\Scripts\DataAccessScripts.js" />
     <Content Remove="wwwroot\Scripts\DirectoryScripts.js" />
+    <Content Remove="wwwroot\Scripts\Helpers\BootBoxHelper.js" />
   </ItemGroup>
 </Project>

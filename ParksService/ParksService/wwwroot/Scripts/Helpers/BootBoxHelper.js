@@ -4,7 +4,7 @@
         message: data,
         buttons: {
             main: {
-                label: "Hiya",
+                label: "Okay",
                 className: "btn-primary",
                 callback: function () { }
             }
