@@ -1,13 +1,8 @@
 ﻿<Properties StartupConfiguration="{C6FC55AD-0DE0-4491-9817-553F57D507FA}|Default">
   <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/wwwroot/css/DirectoryPageStyle.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Views/Home/About.cshtml">
     <Files>
-      <File FileName="ParksService/Views/Home/Explore.cshtml" Line="8" Column="52" />
-      <File FileName="ParksService/wwwroot/Scripts/ExplorePageScripts.js" Line="55" Column="1" />
-      <File FileName="ParksService/wwwroot/Scripts/DirectoryScripts.js" Line="90" Column="40" />
-      <File FileName="ParksService/Views/Home/Directory.cshtml" Line="5" Column="7" />
-      <File FileName="ParksService/wwwroot/css/DirectoryPageStyle.css" Line="142" Column="1" />
-      <File FileName="ParksService/wwwroot/css/ViewDetailsModalStyle.css" Line="112" Column="2" />
+      <File FileName="ParksService/Views/Home/About.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

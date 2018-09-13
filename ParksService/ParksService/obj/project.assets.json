@@ -12472,11 +12472,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/ParksService.csproj",
+      "projectUniqueName": "/Users/uakti/Documents/Programs/NPS/ParksService/ParksService/ParksService.csproj",
       "projectName": "ParksService",
-      "projectPath": "/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/ParksService.csproj",
+      "projectPath": "/Users/uakti/Documents/Programs/NPS/ParksService/ParksService/ParksService.csproj",
       "packagesPath": "/Users/uakti/.nuget/packages/",
-      "outputPath": "/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj",
+      "outputPath": "/Users/uakti/Documents/Programs/NPS/ParksService/ParksService/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
