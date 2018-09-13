@@ -1,8 +1,13 @@
 # NPS
-V 0.0 (Intro)
+
+Intro
+
 Practice/warmup project using MVC to learn how to pull JSON data from the web and rehost it.
 Data is of US National Parks from the NPS at: https://developer.nps.gov/api/v1/
 (Note: API is inaccessible without a key)
+
+
+Change Log
 
 V 0.1
 Most pages are now functional, though "Explore" is barebones. More pages will be added eventually. "About" page also needs to be tweaked to have more information.
@@ -15,3 +20,9 @@ I found an error with the API. I can't make requests for operatingHours, images 
 
 V 0.4
 Need to flesh out details views from Explore, then V1 will be ready. Explore view is otherwise finished - along with Index, Directory and About (for now).
+
+V 0.5
+Details view in Explore is now the same as the one in Directory - not the final version, as it will be tailored to show what the user wants as a potential visitor, but good enough for version 1. Still no implementation of the Visitor Info button.
+
+V 1
+All pages have content and are at least mostly finished and working. Other than the Visitor Info button in Explore, everything exists as the barebones version of what this app will be. More will be added and aesthetic changes will be made later.
