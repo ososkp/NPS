@@ -49,14 +49,13 @@
                                 ${park.address.city}  ${park.address.stateCode} ${park.address.postalCode}</p>
                             </div>
                             <div class="links col-md-4 text-center">
-                                <h4>More Information:</h4>
+                                <h4>Information:</h4>
                                 <a href="${park.url}" target="_blank" class="table-link">Website</a><br />
-                                <a href="${getUrl(park.latLong)}" target="_blank">Map</a><br />
                                 <a href="javascript:void(0);" id="${park.id}" class="view-details" target="_blank">Details</a> <br />
                             </div>
                             <div class="col-md-4 text-center">
                                 <h4>Visitors:</h4>
-                                    <input type="button" class="btn btn-primary btn-lg visitor-details" value="Info"></input>
+                                    <input type="button" id="${park.id}" class="btn btn-primary btn-lg visitor-details" value="Info"></input>
                             </div>
                         </div>
                     </div>
@@ -74,11 +73,11 @@
 
     $("body").on("click",
         ".visitor-details",
-        function () {
+        function (button) {
             var url = `/Explore/VisitorDetails`;
-
+            var id = button.target.id
             $.get(url,
-                { id: this.id },
+                { id: id },
                 function (data) {
                     bootbox.dialog({
                         title: null,
@@ -121,7 +120,6 @@
     $("body").on("click",
         ".view-details",
             function(button){
-                console.log("Under Construction");
                 var id = button.target.id;
                 var url = `/Home/ViewDetails/${id}`
 

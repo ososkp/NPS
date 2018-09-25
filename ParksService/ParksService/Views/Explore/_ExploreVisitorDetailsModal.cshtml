@@ -3,7 +3,68 @@
 
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
 <link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/ViewDetailsModalStyle.css" />
 
 <body>
-    Hello
+    <form id="details-form">
+        <div id="view-details">
+            <div id="details-header">
+                <div id="details-title">
+                    <h3>@Model.FullName</h3>
+                </div>
+                <h5>@Model.FullState</h5>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Getting There</button>
+            <div id="directions-collapse" class="content">
+                <p>@Model.DirectionsInfo</p>
+                <br />
+                <div class="address">
+                    <h4>Address:</h4>
+                    @Model.Address.Line1 <br />
+                    <div class='@Model.Address.Line2.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line2</div>
+                    <div class='@Model.Address.Line3.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line3</div>
+                    @Model.Address.City, @Model.Address.StateCode @Model.Address.PostalCode <br />
+                    <button class="btn btn-link map-button" id="@Model.LatLong">Map</button>
+                    <br />
+                </div>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Weather</button>
+            <div id="weather-collapse" class="content">
+                <p>@Model.WeatherInfo</p>
+            </div>
+        </div>
+    </form>
 </body>
+
+<script type="text/javascript">
+    $("body").on("click",
+        ".map-button",
+        function (button) {
+            coords = button.target.id
+            var url = "http://maps.google.com/maps?q=";
+            url = url + coords.replace(/[a-zA-Z]|:|\s/g, "");
+            var win = window.open(url, '_blank');
+            win.focus();
+        // Ensures Explore page doesn't refresh when this page loads
+            return false;
+    });
+</script>
+
+<script type="text/javascript">
+    var collapsibles = $(".collapsible");
+
+    for (var i = 0; i < collapsibles.length; i++) {
+        collapsibles[i].addEventListener("click",
+            function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+    }
+</script>
