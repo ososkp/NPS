@@ -165,10 +165,10 @@ body {
         color: #fdf9d0 !important;
     }
 
-        /* Section - Block */
-        /**************************/
+/* Section - Block */
+/**************************/
 #nps-parallax .block {
-    background-color: #dedbb8;
+    background-color: #c1bea0;
     padding: 60px;
     width: 100% !important;
     margin: 0 auto;
@@ -186,7 +186,6 @@ body {
         padding: 40px;
         width: 100% !important;
         box-shadow: 0 0 3pt 1pt #bdb76b;
-
     }
 }
 
@@ -324,6 +323,14 @@ body {
     width: 150px;
     margin: 0 auto;
 }
+
+#nps-parallax a {
+    color: #0056b3;
+}
+
+    #nps-parallax a:hover {
+        color: #003e82 !important;
+    }
 
 /* Media Queries */
 /**************************/

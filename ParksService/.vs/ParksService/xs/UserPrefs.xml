@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{C6FC55AD-0DE0-4491-9817-553F57D507FA}|Default">
   <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Services/Concrete/ParkService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/wwwroot/css/indexParallax.css">
     <Files>
       <File FileName="ParksService/Views/Home/About.cshtml" Line="134" Column="2" />
-      <File FileName="ParksService/wwwroot/Scripts/DirectoryScripts.js" Line="5" Column="17" />
+      <File FileName="ParksService/wwwroot/Scripts/DirectoryScripts.js" Line="93" Column="4" />
       <File FileName="ParksService/Controllers/HomeController.cs" Line="15" Column="13" />
-      <File FileName="ParksService/Services/Concrete/ParkService.cs" Line="11" Column="15" />
+      <File FileName="ParksService/Services/Concrete/ParkService.cs" Line="69" Column="10" />
+      <File FileName="ParksService/wwwroot/css/indexParallax.css" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
