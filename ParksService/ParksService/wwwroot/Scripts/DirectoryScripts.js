@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿// https://developer.nps.gov/api/v1/parks?limit=498&fields=addresses,entranceFees&api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
+$(document).ready(function () {
     // Refresh local parks.json from API source
     var refreshParks = function () {
         $("#parks-button").text("Loading...");

@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{C6FC55AD-0DE0-4491-9817-553F57D507FA}|Default">
   <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Views/Home/_ViewDetailsModal.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/wwwroot/css/ExplorePageStyle.css">
     <Files>
-      <File FileName="ParksService/Views/Home/Explore.cshtml" Line="58" Column="1" />
-      <File FileName="ParksService/Views/Explore/_ExploreVisitorDetailsModal.cshtml" Line="38" Column="23" />
-      <File FileName="ParksService/wwwroot/Scripts/ExplorePageScripts.js" Line="77" Column="27" />
-      <File FileName="ParksService/Views/Home/_ViewDetailsModal.cshtml" Line="27" Column="45" />
+      <File FileName="ParksService/Views/Explore/_ExploreVisitorDetailsModal.cshtml" Line="40" Column="54" />
+      <File FileName="ParksService/wwwroot/css/ViewDetailsModalStyle.css" Line="104" Column="17" />
+      <File FileName="ParksService/wwwroot/Scripts/ExplorePageScripts.js" Line="54" Column="87" />
+      <File FileName="ParksService/wwwroot/css/ExplorePageStyle.css" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

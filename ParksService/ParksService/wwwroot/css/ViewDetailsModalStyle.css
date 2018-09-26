@@ -4,6 +4,7 @@
 
 .address {
     float: none;
+    text-align: center;
 }
 
 #view-details {
@@ -44,10 +45,6 @@
     background-color: darkkhaki;
     color: #213838;
     border-color: #213838;
-}
-
-.address {
-    text-align: center;
 }
 
 /* Collapsible Buttons for Details View */
@@ -102,6 +99,11 @@
         letter-spacing: 1px;
         line-height: 23px;
     }
+
+.centered {
+    float: none;
+    text-align: center;
+}
 
 .bootbox-close-button {
     color: khaki;

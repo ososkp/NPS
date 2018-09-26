@@ -12,6 +12,7 @@
     text-decoration: underline;
     text-transform: capitalize;
 }
+
 .explore h3 {
     font-size: 24px;
     font-weight: 700;
@@ -30,7 +31,6 @@
 .explore .state-listing {
     font-size: 18px;
     color: #7a8086 !important;
-    line-height: 1px;
     padding-top: 7px;
 }
 
@@ -81,6 +81,10 @@
     text-align: center;
     cursor: pointer;
 }
+/*Give a little more room between link to website and button for details*/
+.web-link {
+    line-height: 55px;
+}
 
 .result {
     border-bottom-style: inset;
@@ -117,9 +121,9 @@
     color: #041908 !important;
 }
 
-.autocomplete-active:hover {
-    background-color: #bdb76b;
-}
+    .autocomplete-active:hover {
+        background-color: #bdb76b;
+    }
 
 .btn-link:focus, .btn-link:active {
     box-shadow: none !important;
@@ -133,11 +137,12 @@
 .card-body {
     background-color: #213838;
 }
-.card-body .btn-link {
-    color: #fdf9d0;
-    white-space: normal;
-    letter-spacing: 3px;
-}
+
+    .card-body .btn-link {
+        color: #fdf9d0;
+        white-space: normal;
+        letter-spacing: 3px;
+    }
 
 .card-deck {
     margin-top: 11px;

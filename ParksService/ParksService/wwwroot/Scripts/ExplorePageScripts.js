@@ -42,20 +42,16 @@
                     <hr>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 text-center">
+                            <div class="col-md-6 text-center">
                                 <h4>Office Address:</h4>
                                 <p>${park.address.line1}<br />
                                 ${line2Holder} ${line3Holder}
                                 ${park.address.city}  ${park.address.stateCode} ${park.address.postalCode}</p>
                             </div>
-                            <div class="links col-md-4 text-center">
+                            <div class="links col-md-6 text-center">
                                 <h4>Information:</h4>
-                                <a href="${park.url}" target="_blank" class="table-link">Website</a><br />
-                                <a href="javascript:void(0);" id="${park.id}" class="view-details" target="_blank">Details</a> <br />
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <h4>Visitors:</h4>
-                                    <input type="button" id="${park.id}" class="btn btn-primary btn-lg visitor-details" value="Info"></input>
+                                <input type="button" id="${park.id}" class="btn btn-primary btn-lg visitor-details" value="Visitors"></input><br />
+                                <a href="${park.url}" target="_blank" class="web-link table-link">Website</a>
                             </div>
                         </div>
                     </div>

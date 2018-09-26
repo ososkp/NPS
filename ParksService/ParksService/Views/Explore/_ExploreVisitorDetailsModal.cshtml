@@ -22,8 +22,8 @@
                 <div class="address">
                     <h4>Address:</h4>
                     @Model.Address.Line1 <br />
-                    <div class='@Model.Address.Line2.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line2</div>
-                    <div class='@Model.Address.Line3.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line3</div>
+                    <div class='(@Model.Address.Line2.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line2</div>
+                    <div class='(@Model.Address.Line3.Length > 0 ? "visible-item" : "hidden-item")'>@Model.Address.Line3</div>
                     @Model.Address.City, @Model.Address.StateCode @Model.Address.PostalCode <br />
                     <button class="btn btn-link map-button" id="@Model.LatLong">Map</button>
                     <br />
@@ -33,6 +33,13 @@
             <button type="button" class="collapsible">Weather</button>
             <div id="weather-collapse" class="content">
                 <p>@Model.WeatherInfo</p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Fees</button>
+            <div id="fees-collapse" class="content centered">
+                <h4>@Model.EntranceFees[0].Title</h4>
+                <p>@Model.EntranceFees[0].Description</p>
+                <p>Cost: $@Model.EntranceFees[0].Cost</p>
             </div>
         </div>
     </form>
