@@ -1,0 +1,145 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+.body-content {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+button:focus {
+    outline-color: #bdb76b !important;
+}
+
+/* My Overrides*/
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-color: #efefef;
+}
+
+/* Bootstrap Overrides */
+.navbar-dark {
+    background-color: #213838 !important;
+    border-color: #213838 !important;
+}
+
+    .navbar-dark .navbar-brand {
+        color: #fdf9d0; /* Text color for site title*/
+        font-size: 26px;
+        font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: 9px;
+    }
+
+    .navbar-dark .navbar-nav > li > a {
+        color: #fdf9d0;
+        font-size: 16px;
+    }
+
+.navbar-nav {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.navbar-brand {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #1d3131; /* Dropdown Button Color */
+}
+
+.dropdown :focus {
+    outline-color: #173938 !important;
+}
+
+.dropdown-menu {
+    background-color: #213838;
+}
+
+    .dropdown-menu > li > a {
+        color: #fdf9d0;
+    }
+
+    .dropdown-menu .nav-link {
+        color: #fdf9d0 !important;
+    }
+
+.nav-link:hover {
+    color: #1d3131 !important;
+    background-color: #fdf9d0;
+}
+
+.nav-link:focus {
+    color: #1d3131 !important;
+    outline-color: darkkhaki !important;
+}
+
+.btn:focus, .btn:active {
+    box-shadow: 0 0 0 0.2rem #bdb76b;
+    box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
+}
+
+.btn:not(:disabled):not(.disabled):active:focus,
+.btn:not(:disabled):not(.disabled).active:focus,
+.show > .btn.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #bdb76b;
+    box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
+}
+
+.btn-primary,
+.btn-primary:visited {
+    background-color: darkkhaki;
+    color: #213838;
+    border-color: #213838;
+    outline-color: darkkhaki;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    .btn-primary:hover {
+        color: #e7e93e;
+        background-color: #213838;
+        border-color: #213838;
+        outline-color: #213838 !important;
+    }
+
+    .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+        color: #e7e93e;
+        background-color: #213838;
+        border-color: #213838;
+        outline-color: #213838 !important;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show > .btn-primary.dropdown-toggle {
+        color: #e7e93e;
+        background-color: #213838;
+        border-color: #213838;
+        outline-color: #213838 !important;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:active:focus {
+        color: #e7e93e !important;
+        background-color: #041908 !important;
+        border-color: #041908 !important;
+        outline: none !important;
+    }
+
+.btn:focus, .btn:active:focus {
+    outline-color: #213838 !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem #bdb76b;
+    box-shadow: 0 0 0 0.2rem rgba(189, 183, 107, .5);
+    border-color: #213838;
+}

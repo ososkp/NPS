@@ -1,0 +1,149 @@
+﻿body {
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.explore hr {
+    border-color: #213838;
+}
+
+.explore h2 {
+    font-size: 36px;
+    text-align: right;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.explore h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    color: #213838;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+.explore h4 {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.explore .state-listing {
+    font-size: 18px;
+    color: #7a8086 !important;
+    padding-top: 7px;
+}
+
+.explore a:visited {
+    color: forestgreen;
+}
+
+.header-label {
+    font-size: larger;
+    color: #213838;
+    font-weight: 700;
+}
+
+.explore .search-button {
+    margin-top: 4px;
+    position: relative;
+}
+
+.explore .states-box {
+    width: 25%;
+    font-size: large;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.search-results,
+.designation-search-results {
+    height: auto;
+    background-color: #efefef;
+    border: none;
+    box-shadow: none;
+    font-family: 'Bitter', serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.button-div {
+    margin-right: 12px;
+}
+
+.match {
+    color: khaki;
+    background-color: #213838;
+    list-style: none;
+    border: none;
+    outline: none;
+    width: 25%;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+/*Give a little more room between link to website and button for details*/
+.web-link {
+    line-height: 55px;
+}
+
+.result {
+    border-bottom-style: inset;
+    border-bottom-color: #676767;
+}
+
+    .result hr {
+        width: 80%;
+        border-color: #bcbaba;
+    }
+
+.description {
+    text-align: justify;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.match:hover {
+    color: darkkhaki;
+    background-color: #041908;
+}
+
+.match:active {
+    background-color: darkkhaki !important;
+    color: #041908 !important;
+}
+
+#autocomplete {
+    width: 25%;
+}
+
+.autocomplete-active {
+    background-color: darkkhaki !important;
+    color: #041908 !important;
+}
+
+    .autocomplete-active:hover {
+        background-color: #bdb76b;
+    }
+
+.btn-link:focus, .btn-link:active {
+    box-shadow: none !important;
+}
+
+#clear-results-button {
+    display: none;
+}
+
+/* Designation Cards */
+.card-body {
+    background-color: #213838;
+}
+
+    .card-body .btn-link {
+        color: #fdf9d0;
+        white-space: normal;
+        letter-spacing: 3px;
+    }
+
+.card-deck {
+    margin-top: 11px;
+}
