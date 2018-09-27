@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{D5E79C98-3A10-42C0-AE9F-E1B0505B1E35}|Default">
   <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Program.cs">
     <Files>
       <File FileName="ParksService/ParksService.csproj" Line="5" Column="66" />
-      <File FileName="ParksService/Startup.cs" Line="69" Column="17" />
+      <File FileName="ParksService/Startup.cs" Line="77" Column="23" />
+      <File FileName="ParksService/Program.cs" Line="9" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
