@@ -12458,6 +12458,7 @@
     ".NETCoreApp,Version=v2.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 5.0.1",
       "Microsoft.AspNetCore.App >= 2.1.4",
+      "Microsoft.Extensions.Configuration.CommandLine >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.4",
       "NWebsec.AspNetCore.Middleware >= 2.0.0",
@@ -12533,6 +12534,10 @@
           "System.Linq.Expressions": {
             "target": "Package",
             "version": "4.3.0"
+          },
+          "Microsoft.Extensions.Configuration.CommandLine": {
+            "target": "Package",
+            "version": "2.1.1"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",

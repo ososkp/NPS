@@ -99,4 +99,3 @@ C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/Ra
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.dll
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.pdb
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CopyComplete
-/Users/uakti/Documents/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojAssemblyReference.cache
