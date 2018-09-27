@@ -26,3 +26,6 @@ Details view in Explore is now the same as the one in Directory - not the final 
 
 V 1
 All pages have content and are at least mostly finished and working. Other than the Visitor Info button in Explore, everything exists as the barebones version of what this app will be. More will be added and aesthetic changes will be made later.
+
+V 1.1
+Explore page now looks better and is more functional - Visitor Information button shows details not included in Directory's details view.
