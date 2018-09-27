@@ -29,3 +29,6 @@ All pages have content and are at least mostly finished and working. Other than 
 
 V 1.1
 Explore page now looks better and is more functional - Visitor Information button shows details not included in Directory's details view.
+
+V1.2
+Now works on Azure web app hosting - but can't ready from .json and throws a filenotfound exception. Need to migrate to an SQL database on Azure I think.
