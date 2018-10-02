@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
 using ParksService.Helpers;
 
@@ -9,12 +10,11 @@ namespace ParksService.Data.Concrete.Repositories
 {
     public abstract class Repository<T>
     {
-        private readonly string Path = AppDomain.CurrentDomain.BaseDirectory;
         protected readonly string FilePath;
 
-        protected Repository(string fileName)
+        protected Repository(IHostingEnvironment env, string fileName)
         {
-            FilePath = Path + fileName;
+            FilePath = env.WebRootPath + fileName;
         }
 
         public IEnumerable<T> Find(Func<T, bool> predicate)

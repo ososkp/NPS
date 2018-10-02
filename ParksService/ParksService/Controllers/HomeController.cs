@@ -6,78 +6,79 @@ using System.Diagnostics;
 using AutoMapper;
 using ParksService.Models;
 using ParksService.Services.Abstract;
-
+using Microsoft.AspNetCore.Hosting;
 
 namespace ParksService.Controllers
 {
-	public class HomeController : BaseController
+    public class HomeController : BaseController
     {
-	    public HomeController(IParkService parkService, IMapper mapper) : base(parkService, mapper)
-	    {
-	    }
+        public HomeController(IHostingEnvironment env, IParkService parkService, IMapper mapper)
+            : base(env, parkService, mapper)
+        {
+        }
 
         public IActionResult Index()
         {
-	        return View();
-		}
+            return View();
+        }
 
-	    [HttpGet]
-	    public IActionResult GetParks()
-	    {
-		    var parks = _parkService.GetAll();
-		    var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+        [HttpGet]
+        public IActionResult GetParks()
+        {
+            var parks = _parkService.GetAll();
+            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
 
-			return Json(new {viewModel});
-	    }
+            return Json(new { viewModel });
+        }
 
-	    [HttpGet]
-	    public Park GetParkById(Guid id)
-	    {
-		    return _parkService.GetParkById(id);
-	    }
+        [HttpGet]
+        public Park GetParkById(Guid id)
+        {
+            return _parkService.GetParkById(id);
+        }
 
-	    [HttpPost]
-	    public IActionResult PopulateParks([FromBody] IEnumerable<Park> parks)
-	    {
-		    // Repopulate the local Json and app data
+        [HttpPost]
+        public IActionResult PopulateParks([FromBody] IEnumerable<Park> parks)
+        {
+            // Repopulate the local Json and app data
 
-			_parkService.RepopulateParksList(parks);
+            _parkService.RepopulateParksList(parks);
 
-			return Content("Ok");
-	    }
+            return Content("Ok");
+        }
 
         public IActionResult About()
         {
-	        var parks = _parkService.GetAll();
-			var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+            var parks = _parkService.GetAll();
+            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
 
-			return View(viewModel);
-		}
+            return View(viewModel);
+        }
 
-	    public IActionResult Explore()
-	    {
-			var parks = _parkService.GetAll();
-		    var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+        public IActionResult Explore()
+        {
+            var parks = _parkService.GetAll();
+            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
 
-		    return View(viewModel);
-		}
+            return View(viewModel);
+        }
 
         public IActionResult Directory()
         {
-			var parks = _parkService.GetAll();
-	        var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
+            var parks = _parkService.GetAll();
+            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
 
-	        return View(viewModel);
-		}
+            return View(viewModel);
+        }
 
-		[HttpGet]
-	    public IActionResult ViewDetails(Guid id)
-		{
-			var park = _parkService.GetParkById(id);
-			var viewModel = _mapper.Map<ParkViewModel>(park);
+        [HttpGet]
+        public IActionResult ViewDetails(Guid id)
+        {
+            var park = _parkService.GetParkById(id);
+            var viewModel = _mapper.Map<ParkViewModel>(park);
 
-		    return PartialView("_ViewDetailsModal", viewModel);
-	    }
+            return PartialView("_ViewDetailsModal", viewModel);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Hosting;
 using ParksService.Data.Abstract;
 using ParksService.Helpers;
 using ParksService.Models;
@@ -61,6 +62,14 @@ namespace ParksService.Services.Concrete
         }
 
         public IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data)
+        {
+            data = data.Where(p => !p.Name.StartsWith("?", StringComparison.Ordinal));
+
+            WriteData(data);
+            return GetAll();
+        }
+
+        public IEnumerable<Park> RepopulateParksList(IHostingEnvironment env, IEnumerable<Park> data)
         {
             data = data.Where(p => !p.Name.StartsWith("?", StringComparison.Ordinal));
 

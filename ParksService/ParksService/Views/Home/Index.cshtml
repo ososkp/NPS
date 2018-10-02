@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-    <link rel="stylesheet" href="~/css/indexParallax.css"/>
+<link rel="stylesheet" href="~/css/indexParallax.css" />
 
 <div id="nps-parallax">
 
@@ -22,16 +22,16 @@
     </section>
 
     <section class="block">
-            <div class="container">
-                <p><span class="first-character ut">B</span>y the <a href="https://www.ourdocuments.gov/doc.php?flash=false&doc=45>">Act of March 1, 1872</a>, Congress established Yellowstone National Park in the Territories of Montana and Wyoming "as a public park or pleasuring-ground for the benefit and enjoyment of the people" and placed it "under exclusive control of the Secretary of the Interior." </p>
+        <div class="container">
+            <p><span class="first-character ut">B</span>y the <a href="https://www.ourdocuments.gov/doc.php?flash=false&doc=45>">Act of March 1, 1872</a>, Congress established Yellowstone National Park in the Territories of Montana and Wyoming "as a public park or pleasuring-ground for the benefit and enjoyment of the people" and placed it "under exclusive control of the Secretary of the Interior." </p>
 
-                <h4>The founding of Yellowstone National Park began a worldwide national park movement. </h4>
+            <h4>The founding of Yellowstone National Park began a worldwide national park movement. </h4>
 
-                <p>Today more than 100 nations contain some 1,200 national parks or equivalent preserves.</p>
+            <p>Today more than 100 nations contain some 1,200 national parks or equivalent preserves.</p>
 
-                <p>In the years following the establishment of Yellowstone, the United States authorized additional national parks and monuments, many of them carved from the federal lands of the West. These, also, were administered by the Department of the Interior, while other monuments and natural and historical areas were administered by the War Department and the Forest Service of the Department of Agriculture.</p>
+            <p>In the years following the establishment of Yellowstone, the United States authorized additional national parks and monuments, many of them carved from the federal lands of the West. These, also, were administered by the Department of the Interior, while other monuments and natural and historical areas were administered by the War Department and the Forest Service of the Department of Agriculture.</p>
 
-                <h4 class="margin-top-10">No single agency provided unified management of the varied federal parklands. </h4>
+            <h4 class="margin-top-10">No single agency provided unified management of the varied federal parklands. </h4>
         </div>
     </section>
 
@@ -114,9 +114,9 @@
             </p>
 
             <p>
-            The Secretary of the Interior is usually asked by Congress for recommendations on proposed
-            additions to the System. The Secretary is counseled by the National Park System Advisory Board,
-            composed of private citizens, which advises on possible additions to the System and policies for its management.
+                The Secretary of the Interior is usually asked by Congress for recommendations on proposed
+                additions to the System. The Secretary is counseled by the National Park System Advisory Board,
+                composed of private citizens, which advises on possible additions to the System and policies for its management.
         </div>
     </section>
     <section>
@@ -143,7 +143,7 @@
                 close-to-home recreational opportunities.
             </h4>
             <br />
-            <p style="font-size: small"><a href="https://www.nps.gov/articles/quick-nps-history.htm">Source</a></p>
+            <p style="        font-size: small"><a href="https://www.nps.gov/articles/quick-nps-history.htm">Source</a></p>
         </div>
 
     </section>
@@ -154,3 +154,32 @@
     </section>
 
 </div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                url: "https://developer.nps.gov/api/v1/parks",
+                data: {
+                    limit: 498,
+                    fields: "addresses,entranceFees",
+                    api_key: "5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs",
+                    sort: "-name"
+                },
+                type: "GET",
+                dataType: "JSON",
+                success: function (data) {
+                    console.log(data);
+                    var parks = JSON.stringify(data.data);
+                    $.ajax({
+                        type: "POST",
+                        url: "/Home/PopulateParks",
+                        data: parks,
+                        dataType: "JSON",
+                        contentType: "application/json; charset=utf-8",
+                    });
+                }
+            });
+        });
+    </script>
+}
