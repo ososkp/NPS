@@ -32,3 +32,6 @@ Explore page now looks better and is more functional - Visitor Information butto
 
 V1.2
 Now works on Azure web app hosting - but can't read from .json and throws a filenotfound exception. Need to migrate to an SQL database on Azure I think.
+
+V2.0
+Project is now live on Azure with full functionality.

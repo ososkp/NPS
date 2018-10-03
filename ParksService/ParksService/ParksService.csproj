@@ -16,8 +16,12 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="wwwroot\Scripts\DataAccessScripts.js" />
-        <None Include="wwwroot\Scripts\DirectoryScripts.js" />
-        <None Include="wwwroot\Scripts\Helpers\BootBoxHelper.js" />
+        <None Include="wwwroot\Scripts\DirectoryScripts.js">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="wwwroot\Scripts\Helpers\BootBoxHelper.js">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
     <ItemGroup>
         <Folder Include="bin\Debug\netcoreapp2.1.4\" />
