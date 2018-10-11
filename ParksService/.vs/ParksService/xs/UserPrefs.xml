@@ -7,7 +7,7 @@
       <File FileName="ParksService/Views/Home/Index.cshtml" Line="179" Column="72" />
       <File FileName="ParksService/web.config" Line="1" Column="1" />
       <File FileName="ParksService/wwwroot/Scripts/DirectoryScripts.js" Line="1" Column="1" />
-      <File FileName="ParksService/Views/Home/Directory.cshtml" Line="1" Column="1" />
+      <File FileName="ParksService/Views/Home/Directory.cshtml" Line="37" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

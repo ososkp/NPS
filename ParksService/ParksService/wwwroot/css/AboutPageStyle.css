@@ -43,7 +43,7 @@
 }
  
  .inner { 
-     position: absolute; 
+     position: static; 
      color: khaki; 
      background-color: #262625; 
      height: 575px; 
