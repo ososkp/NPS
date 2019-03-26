@@ -32,40 +32,6 @@ C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/Pa
 C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CopyComplete
 C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojAssemblyReference.cache
 C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Explore/_ExploreVisitorDetailsModal.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.deps.json
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.runtimeconfig.json
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.runtimeconfig.dev.json
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.dll
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.pdb
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.Views.dll
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.Views.pdb
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CoreCompileInputs.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorAssemblyInfo.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorAssemblyInfo.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.AssemblyInfoInputs.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.AssemblyInfo.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.TagHelpers.input.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.TagHelpers.output.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorCoreGenerate.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Explore/_ExploreVisitorDetailsModal.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/About.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Directory.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Explore.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Test.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/_ViewDetailsModal.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/_ViewStart.g.cshtml.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorTargetAssemblyInfo.cache
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorTargetAssemblyInfo.cs
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.Views.pdb
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.dll
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.pdb
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CopyComplete
-/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojAssemblyReference.cache
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.deps.json
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.runtimeconfig.json
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.runtimeconfig.dev.json
@@ -102,3 +68,39 @@ C:/Users/ososk/source/repos/ParksService/ParksService/obj/Debug/netcoreapp2.1/Ra
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojAssemblyReference.cache
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/wwwroot/Scripts/DirectoryScripts.js
 /Users/uakti/Documents/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/wwwroot/Scripts/Helpers/BootBoxHelper.js
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/wwwroot/Scripts/DirectoryScripts.js
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/wwwroot/Scripts/Helpers/BootBoxHelper.js
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.deps.json
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.runtimeconfig.json
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.runtimeconfig.dev.json
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.dll
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.pdb
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.Views.dll
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/bin/Debug/netcoreapp2.1/ParksService.Views.pdb
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csprojAssemblyReference.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CoreCompileInputs.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorAssemblyInfo.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorAssemblyInfo.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.AssemblyInfoInputs.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.AssemblyInfo.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.TagHelpers.input.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.TagHelpers.output.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorCoreGenerate.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Explore/_ExploreVisitorDetailsModal.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/About.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Directory.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Explore.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/Test.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Home/_ViewDetailsModal.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/Razor/Views/_ViewStart.g.cshtml.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorTargetAssemblyInfo.cache
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.RazorTargetAssemblyInfo.cs
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.Views.pdb
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.dll
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.pdb
+/Users/uakti/Google Drive/Programs/NPS/ParksService/ParksService/obj/Debug/netcoreapp2.1/ParksService.csproj.CopyComplete
