@@ -1,5 +1,5 @@
 *.DS_STORE
-.vscode/
+ParksService/.vscode/
 .vs/
 bin/
 obj/
