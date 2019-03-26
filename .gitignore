@@ -1,1 +1,6 @@
 *.DS_STORE
+.vscode/
+.vs/
+bin/
+obj/
+ParksService/.vs/

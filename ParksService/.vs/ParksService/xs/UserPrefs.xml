@@ -1,19 +1,14 @@
 ﻿<Properties StartupConfiguration="{D5E79C98-3A10-42C0-AE9F-E1B0505B1E35}|Default">
-  <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ParksService/Views/Home/Directory.cshtml">
     <Files>
-      <File FileName="ParksService/Data/Concrete/Repositories/Repository.cs" Line="17" Column="51" />
-      <File FileName="ParksService/Views/Home/About.cshtml" Line="114" Column="19" />
-      <File FileName="ParksService/Views/Home/Index.cshtml" Line="179" Column="72" />
-      <File FileName="ParksService/web.config" Line="1" Column="1" />
-      <File FileName="ParksService/wwwroot/Scripts/DirectoryScripts.js" Line="1" Column="1" />
-      <File FileName="ParksService/Views/Home/Directory.cshtml" Line="37" Column="2" />
+      <File FileName="ParksService/Views/Home/Directory.cshtml" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ParksService PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
