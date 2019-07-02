@@ -1,4 +1,6 @@
 ﻿// https://developer.nps.gov/api/v1/parks?limit=498&fields=addresses,entranceFees&api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
+import { NPS_API } from './Helpers/APIKeys.js';
+
 $(document).ready(function () {
     // Refresh local parks.json from API source
     var refreshParks = function () {
@@ -6,9 +8,9 @@ $(document).ready(function () {
         $.ajax({
             url: "https://developer.nps.gov/api/v1/parks",
             data: {
-                limit: 498,
+                limit: 382,
                 fields: "addresses,entranceFees",
-                api_key: "5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs",
+                api_key: NPS_API,
                 sort: "-name"
             },
             type: "GET",
@@ -28,6 +30,9 @@ $(document).ready(function () {
                         $("#parks-button").blur();
                     }
                 });
+            },
+            error: function (error) {
+                console.log(error)
             }
         });
     };
