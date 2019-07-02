@@ -35,3 +35,7 @@ Now works on Azure web app hosting - but can't read from .json and throws a file
 
 V2.0
 Project is now live on Azure with full functionality.
+
+V2.1
+Removed "Refresh Parks List" button. There is a dataset error in the NPS API that is causing me to be unable to pull data after entry number 382. Before, I could pull up to 498 without error. Rather than shrink the data when a user hits refresh and overwrites the .json file, I'm just getting rid of the button until the issue is fixed.
+Note: I've tried contacting the NPS dev team about this with no luck.
