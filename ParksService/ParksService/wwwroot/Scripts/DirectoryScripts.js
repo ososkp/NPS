@@ -1,5 +1,4 @@
-﻿// https://developer.nps.gov/api/v1/parks?limit=498&fields=addresses,entranceFees&api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
-import { NPS_API } from './Helpers/APIKeys.js';
+﻿import { NPS_API } from './Helpers/APIKeys.js';
 
 $(document).ready(function () {
     // Refresh local parks.json from API source
