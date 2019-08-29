@@ -12,7 +12,7 @@
 .sorting_asc,
 .sorting_desc {
     background-color: #213838;
-    color: #e7e93e;
+    color: #fdf9d0;
 }
 
 #parks-table_wrapper {
@@ -74,9 +74,9 @@ select {
     color: #041908 !important;
 }
 
-    .selected .table-link:visited {
-        color: forestgreen !important;
-    }
+.selected .table-link:visited {
+    color: forestgreen !important;
+}
 
 table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.dataTable tbody td.selected a {
     color: #117cb1 !important;

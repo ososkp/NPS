@@ -54,21 +54,9 @@ body {
     background-color: #1d3131; /* Dropdown Button Color */
 }
 
-.dropdown :focus {
-    outline-color: #173938 !important;
+.navbar-dark .navbar-nav .nav-link  {
+    color: #fdf9d0;
 }
-
-.dropdown-menu {
-    background-color: #213838;
-}
-
-    .dropdown-menu > li > a {
-        color: #fdf9d0;
-    }
-
-    .dropdown-menu .nav-link {
-        color: #fdf9d0 !important;
-    }
 
 .nav-link:hover {
     color: #1d3131 !important;
