@@ -12,9 +12,6 @@ namespace ParksService.Data.Concrete
         public IParkRepository ParkRepository { get; }
         public IImageDataRepository ImageDataRepository { get; }
         public IEntranceFeeRepository EntranceFeeRepository { get; }
-        public IOperatingHoursRepository OperatingHoursRepository { get; }
-        public IHoursExceptionsRepository HoursExceptionsRepository { get; }
-        public IWeeklyHoursRepository WeeklyHoursRepository { get; }
 
         public UnitOfWork(IHostingEnvironment Environment)
         {
@@ -23,9 +20,6 @@ namespace ParksService.Data.Concrete
             ParkRepository = new ParkRepository(Environment);
             ImageDataRepository = new ImageDataRepository(Environment);
             EntranceFeeRepository = new EntranceFeeRepository(Environment);
-            OperatingHoursRepository = new OperatingHoursRepository(Environment);
-            HoursExceptionsRepository = new HoursExceptionsRepository(Environment);
-            WeeklyHoursRepository = new WeeklyHoursRepository(Environment);
         }
 
     }

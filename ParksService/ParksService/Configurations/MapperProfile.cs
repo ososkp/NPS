@@ -18,10 +18,6 @@ namespace ParksService.Configurations
 						opts => opts.MapFrom(src => ParkServiceHelper.MapAddress(src)))
 					.ForMember(dest => dest.EntranceFees,
 						opts => opts.MapFrom(src => ParkServiceHelper.MapEntranceFee(src)));
-//					.ForMember(dest => dest.OperatingHours,
-//						opts => opts.MapFrom(src => ParkServiceHelper.MapOperatingHours(src)));
-//					.ForMember(dest => dest.Images,
-//						opts => opts.MapFrom(src => ParkServiceHelper.MapImageData(src)));
 			});
 		}
 	}

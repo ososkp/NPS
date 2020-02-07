@@ -39,3 +39,7 @@ Project is now live on Azure with full functionality.
 V2.1
 Removed "Refresh Parks List" button. There is a dataset error in the NPS API that is causing me to be unable to pull data after entry number 382. Before, I could pull up to 498 without error. Rather than shrink the data when a user hits refresh and overwrites the .json file, I'm just getting rid of the button until the issue is fixed.
 Note: I've tried contacting the NPS dev team about this with no luck.
+
+V2.2
+Removed ability to navigate to the 'About' page from the navbar. Need to figure out how to fix the styling issues that have
+suddenly popped up.

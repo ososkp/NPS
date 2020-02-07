@@ -10,8 +10,5 @@ namespace ParksService.Data.Abstract
         IParkRepository ParkRepository { get; }
         IImageDataRepository ImageDataRepository { get; }
         IEntranceFeeRepository EntranceFeeRepository { get; }
-        IOperatingHoursRepository OperatingHoursRepository { get; }
-        IHoursExceptionsRepository HoursExceptionsRepository { get; }
-        IWeeklyHoursRepository WeeklyHoursRepository { get; }
     }
 }
