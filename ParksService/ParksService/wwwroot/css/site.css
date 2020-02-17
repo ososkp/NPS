@@ -64,8 +64,8 @@ body {
 }
 
 .nav-link:focus {
-    color: #1d3131 !important;
-    outline-color: darkkhaki !important;
+    color: #fdf9d0 !important;
+    background-color: #1d3131;
 }
 
 .btn:focus, .btn:active {
