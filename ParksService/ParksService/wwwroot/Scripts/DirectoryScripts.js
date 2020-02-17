@@ -7,7 +7,7 @@ $(document).ready(function () {
         $.ajax({
             url: "https://developer.nps.gov/api/v1/parks",
             data: {
-                limit: 382,
+                limit: 496,
                 fields: "addresses,entranceFees",
                 api_key: NPS_API,
                 sort: "-name"
@@ -85,10 +85,10 @@ $(document).ready(function () {
     $("#parks-table tbody").on("click",
         "button",
         function () {
-            var data = table.row($(this).parents("tr")).data();
-            var id = data["id"];
+            const data = table.row($(this).parents("tr")).data();
+            const id = data["id"];
 
-            var url = `/Home/ViewDetails/${id}`;
+            const url = `/Home/ViewDetails/${id}`;
 
             $.get(url,
                 function (data) {

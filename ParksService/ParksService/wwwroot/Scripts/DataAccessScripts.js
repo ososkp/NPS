@@ -21,6 +21,5 @@ $(document).ready(function () {
         result.data.forEach(function (park) {
             parks.push(park);
         });
-        console.log(parks);
     };
 });

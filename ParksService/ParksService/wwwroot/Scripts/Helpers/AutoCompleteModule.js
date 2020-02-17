@@ -1,4 +1,4 @@
-﻿/* AutoComplete Module */
+﻿/* AutoComplete Module Options */
 //      elementType:            What we are adding to the DOM for each result - for example, <li>
 //      domClass:               Class given to each element we are adding
 //      dataSource:             Source of autocomplete options
@@ -18,18 +18,24 @@ const AutoCompleteModule = function () {
         let box = options.getInputBox();
         box.on("keyup", function (e) {
             if (!checkNavigationButton(this, e))
-                searchData(box.val().toLowerCase());
+                searchData(box.val()
+                    .toLowerCase()
+                    .replace(/[^a-zA-Z]/g, ""));
         });
     };
 
     const checkNavigationButton = function (caller, e) {
+        // If arrow up or arrow down
         if (e.keyCode === 38 || e.keyCode === 40) {
             return addActive(e.keyCode - 39);
+        // If enter
         } else if (e.keyCode === 13) {
             e.preventDefault();
+            // If the user has something in the list highlighted, 'enter' selects that state/region
             if (currentFocus > -1) {
                 $(`.${options.domClass}-${currentFocus}`).click();
                 return true;
+            // Otherwise, select the first item in the list
             } else if (currentFocus === -1 && index > 0) {
                 $(`.${options.domClass}-0`).addClass("autocomplete-active");
                 $(`.${options.domClass}-0`).click();
@@ -39,6 +45,7 @@ const AutoCompleteModule = function () {
     }
 
     const addActive = function (key) {
+        // key will either be -1 or 1 and is used to set bounds on highlighting the list
         currentFocus += key;
         if (currentFocus >= index - 1) currentFocus = index - 1;
         if (currentFocus < 0) currentFocus = 0;
@@ -48,6 +55,7 @@ const AutoCompleteModule = function () {
     }
 
     const searchData = function (text) {
+        // Repopulating the autcomplete list based on the value in the text box
         clearDropdown();
         if (!options.getInputBox().val()) {
             return;

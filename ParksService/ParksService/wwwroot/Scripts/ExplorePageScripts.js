@@ -1,6 +1,13 @@
 ﻿$(document).ready(function () {
-    let searchBoxDivOffset;
+    const searchBoxDivOffset = 75;
 
+/* AutoComplete Module Options */
+//      elementType:            What we are adding to the DOM for each result - for example, "li" --> <li>
+//      domClass:               Class given to each element we are adding
+//      dataSource:             Source of autocomplete options
+//      callbackFunction:       Handler for returned data
+//      inputBox:               Input element that is being written into by user
+//      container:              <div> that wraps the resulting dropdown
     const myOptions = {
         elementType: "li",
         domClass: "match",
@@ -16,14 +23,35 @@
     };
     AutoCompleteModule.init(myOptions);
 
-    const writeSearchResults = function(parks, searchPredicate, divParameter) {
+    const populateStateSearchResults = function (state) {
+        $(".designation-search-results").empty();
+        $(".explore-designation").slideUp(150);
+        $("#clear-results-button").show();
+
+        $("#autocomplete").val("");
+        $(".match").remove();
+
+        $.ajax({
+            url: "/Explore/GetParksByState/",
+            type: "GET",
+            dataType: "JSON",
+            data: {
+                state: state
+            },
+            success: function(data) {
+                writeSearchResults(data.viewModel, state, $(".search-results"));
+            }
+        });
+    }
+
+    const writeSearchResults = function (parks, searchPredicate, divParameter) {
         let div = divParameter;
         div.empty();
         div.append(`<h2>${searchPredicate}</h2>`);
 
-        // If we're listing by designation, we want to show the state for each park
-        // If sorting by state it's unnecessary
-        parks.forEach(function(park) {
+        parks.forEach(function (park) {
+            // If we're listing by designation, we want to show the state for each park
+            // If sorting by state it's unnecessary
             let nameLine = div[0].className.includes("designation-search-results")
                 ? `<h3>${park.fullName}</h3> <p class="state-listing">${park.fullState}</p>`
                 : `<h3>${park.fullName}</h3>`;
@@ -60,9 +88,8 @@
         });
 
         $("html,body").animate({
-                scrollTop: div.offset().top - searchBoxDivOffset
-            },
-            "medium");
+            scrollTop: div.offset().top - searchBoxDivOffset
+        }, "medium");
 
         $(".states-box").val("");
     }
@@ -89,60 +116,42 @@
                     });
                 }
             );
-    });
-
-    const populateStateSearchResults = function (state) {
-        searchBoxDivOffset = 75;
-        $(".designation-search-results").empty();
-        $(".explore-designation").slideUp(150);
-        $("#clear-results-button").show();
-
-        $("#autocomplete").val("");
-        $(".match").remove();
-
-        $.ajax({
-            url: "/Explore/GetParksByState/",
-            type: "GET",
-            dataType: "JSON",
-            data: {
-                state: state
-            },
-            success: function(data) {
-                writeSearchResults(data.viewModel, state, $(".search-results"));
-            }
-        });
-    }
+        }
+    );
 
     $("body").on("click",
         ".view-details",
-            function(button){
-                const id = button.target.id;
-                const url = `/Home/ViewDetails/${id}`
+        function(button){
+            const id = button.target.id;
+            const url = `/Home/ViewDetails/${id}`
 
-                $.get(url, function (data) {
-                    bootBoxModal(data);
+            $.get(url, function (data) {
+                bootBoxModal(data); // BootBoxHelper.bootBoxModal
             });
-    });
+        }
+    );
 
-    $(".btn-link").on("click", { button: $(this) }, function (button) {
-        searchBoxDivOffset = 75;
-        $(".search-results").empty();
-        $(".explore-state").slideUp(150);
-        $("#clear-results-button").show();
+    $(".btn-link").on("click",
+        { button: $(this) },
+        function (button) {
+            $(".search-results").empty();
+            $(".explore-state").slideUp(150);
+            $("#clear-results-button").show();
 
-        const designation = button.target.id.replace("-", " ");
-        $.ajax({
-            url: "/Explore/GetParksByDesignation/",
-            type: "GET",
-            dataType: "JSON",
-            data: {
-                designation: designation
-            },
-            success: function(data) {
-                writeSearchResults(data.viewModel, `${designation}s`, $(".designation-search-results"));
-            }
-        });
-    });
+            const designation = button.target.id.replace("-", " ");
+            $.ajax({
+                url: "/Explore/GetParksByDesignation/",
+                type: "GET",
+                dataType: "JSON",
+                data: {
+                    designation: designation
+                },
+                success: function(data) {
+                    writeSearchResults(data.viewModel, `${designation}s`, $(".designation-search-results"));
+                }
+            });
+        }
+    );
 
     $("#clear-results-button").on("click",
         function () {
