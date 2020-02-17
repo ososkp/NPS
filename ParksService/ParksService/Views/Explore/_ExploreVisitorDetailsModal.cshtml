@@ -50,9 +50,9 @@
         ".map-button",
         function (button) {
             coords = button.target.id
-            var url = "http://maps.google.com/maps?q=";
+            let url = "http://maps.google.com/maps?q=";
             url = url + coords.replace(/[a-zA-Z]|:|\s/g, "");
-            var win = window.open(url, '_blank');
+            let win = window.open(url, '_blank');
             win.focus();
         // Ensures Explore page doesn't refresh when this page loads
             return false;
@@ -62,11 +62,11 @@
 <script type="text/javascript">
     var collapsibles = $(".collapsible");
 
-    for (var i = 0; i < collapsibles.length; i++) {
+    for (let i = 0; i < collapsibles.length; i++) {
         collapsibles[i].addEventListener("click",
             function () {
                 this.classList.toggle("active");
-                var content = this.nextElementSibling;
+                let content = this.nextElementSibling;
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
