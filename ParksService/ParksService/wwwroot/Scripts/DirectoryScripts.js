@@ -1,7 +1,7 @@
 ﻿import { NPS_API } from './Helpers/APIKeys.js';
 
 $(document).ready(function () {
-    // Refresh local parks.json from API source
+    // Refresh local parks.json from API source IF user presses "Refresh List" button
     var refreshParks = function () {
         $("#parks-button").text("Loading...");
         $.ajax({

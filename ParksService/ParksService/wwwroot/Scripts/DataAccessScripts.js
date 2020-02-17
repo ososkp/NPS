@@ -1,10 +1,10 @@
 ﻿import { NPS_API } from './Helpers/APIKeys.js';
 
-var url = "https://developer.nps.gov/api/v1/parks";
-var key = NPS_API;
+const url = "https://developer.nps.gov/api/v1/parks";
+const key = NPS_API;
 
 $(document).ready(function () {
-    var parks = [];
+    let parks = [];
 
     $.ajax({
         type: "GET",

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     let searchBoxDivOffset;
 
-    var myOptions = {
+    const myOptions = {
         elementType: "li",
         domClass: "match",
         dataSource: states.parksLocations,
@@ -16,22 +16,22 @@
     };
     AutoCompleteModule.init(myOptions);
 
-    var writeSearchResults = function(parks, searchPredicate, divParameter) {
-        var div = divParameter;
+    const writeSearchResults = function(parks, searchPredicate, divParameter) {
+        let div = divParameter;
         div.empty();
         div.append(`<h2>${searchPredicate}</h2>`);
 
         // If we're listing by designation, we want to show the state for each park
         // If sorting by state it's unnecessary
         parks.forEach(function(park) {
-            var nameLine = div[0].className.includes("designation-search-results")
+            let nameLine = div[0].className.includes("designation-search-results")
                 ? `<h3>${park.fullName}</h3> <p class="state-listing">${park.fullState}</p>`
                 : `<h3>${park.fullName}</h3>`;
 
-            var line2Holder = park.address.line2
+            let line2Holder = park.address.line2
                 ? park.address.line2 + "<br />"
                 : "";
-            var line3Holder = park.address.line3
+            let line3Holder = park.address.line3
                 ? park.address.line3 + "<br />"
                 : "";
 
@@ -70,8 +70,8 @@
     $("body").on("click",
         ".visitor-details",
         function (button) {
-            var url = `/Explore/VisitorDetails`;
-            var id = button.target.id
+            const url = `/Explore/VisitorDetails`;
+            const id = button.target.id
             $.get(url,
                 { id: id },
                 function (data) {
@@ -91,7 +91,7 @@
             );
     });
 
-    var populateStateSearchResults = function (state) {
+    const populateStateSearchResults = function (state) {
         searchBoxDivOffset = 75;
         $(".designation-search-results").empty();
         $(".explore-designation").slideUp(150);
@@ -116,8 +116,8 @@
     $("body").on("click",
         ".view-details",
             function(button){
-                var id = button.target.id;
-                var url = `/Home/ViewDetails/${id}`
+                const id = button.target.id;
+                const url = `/Home/ViewDetails/${id}`
 
                 $.get(url, function (data) {
                     bootBoxModal(data);
@@ -130,7 +130,7 @@
         $(".explore-state").slideUp(150);
         $("#clear-results-button").show();
 
-        var designation = button.target.id.replace("-", " ");
+        const designation = button.target.id.replace("-", " ");
         $.ajax({
             url: "/Explore/GetParksByDesignation/",
             type: "GET",

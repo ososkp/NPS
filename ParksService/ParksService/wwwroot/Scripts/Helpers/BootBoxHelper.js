@@ -1,4 +1,4 @@
-﻿var bootBoxModal = function(data) {
+﻿const bootBoxModal = function(data) {
     bootbox.dialog({
         title: null,
         message: data,

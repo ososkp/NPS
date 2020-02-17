@@ -152,34 +152,4 @@
             <div class="container"><h2>Dry Tortugas National Park<br />(Florida)</h2></div>
         </div>
     </section>
-
 </div>
-
-@section scripts {
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $.ajax({
-                url: "https://developer.nps.gov/api/v1/parks",
-                data: {
-                    limit: 498,
-                    fields: "addresses,entranceFees",
-                    api_key: "5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs",
-                    sort: "-name"
-                },
-                type: "GET",
-                dataType: "JSON",
-                success: function (data) {
-                    console.log(data);
-                    var parks = JSON.stringify(data.data);
-                    $.ajax({
-                        type: "POST",
-                        url: "/Home/PopulateParks",
-                        data: parks,
-                        dataType: "JSON",
-                        contentType: "application/json; charset=utf-8",
-                    });
-                }
-            });
-        });
-    </script>
-}

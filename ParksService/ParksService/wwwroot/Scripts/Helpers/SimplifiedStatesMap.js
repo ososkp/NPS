@@ -1,4 +1,4 @@
-﻿var states = function () {
+﻿const states = function () {
     const statesData = new Map(
         [
             ["alabama", "Alabama"],

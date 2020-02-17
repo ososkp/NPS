@@ -6,15 +6,15 @@
 //      inputBox:               Input element that is being written into by user
 //      container:              <div> that wraps the resulting dropdown
 
-var AutoCompleteModule = function () {
-    var options, currentFocus, index;
+const AutoCompleteModule = function () {
+    let options, currentFocus, index;
 
-    var init = function (autoCompleteOptions) {
+    const init = function (autoCompleteOptions) {
         options = autoCompleteOptions;
         setValues();
     };
 
-    var setValues = function () {
+    const setValues = function () {
         let box = options.getInputBox();
         box.on("keyup", function (e) {
             if (!checkNavigationButton(this, e))
@@ -22,7 +22,7 @@ var AutoCompleteModule = function () {
         });
     };
 
-    var checkNavigationButton = function (caller, e) {
+    const checkNavigationButton = function (caller, e) {
         if (e.keyCode === 38 || e.keyCode === 40) {
             return addActive(e.keyCode - 39);
         } else if (e.keyCode === 13) {
@@ -38,7 +38,7 @@ var AutoCompleteModule = function () {
         return false;
     }
 
-    var addActive = function (key) {
+    const addActive = function (key) {
         currentFocus += key;
         if (currentFocus >= index - 1) currentFocus = index - 1;
         if (currentFocus < 0) currentFocus = 0;
@@ -47,7 +47,7 @@ var AutoCompleteModule = function () {
         return true;
     }
 
-    var searchData = function (text) {
+    const searchData = function (text) {
         clearDropdown();
         if (!options.getInputBox().val()) {
             return;
@@ -64,19 +64,19 @@ var AutoCompleteModule = function () {
         });
     };
 
-    var clearDropdown = function () {
+    const clearDropdown = function () {
         currentFocus = -1;
         $(`.${options.domClass}`).remove();
     };
 
-    var appendListItem = function (id, value) {
+    const appendListItem = function (id, value) {
         $(`#${options.container}`)
             .append(`<${options.elementType} class="${options.domClass} ${options.domClass}-${index}" id="${id}">
                         ${value}
                     </${options.elementType}>`);
     };
 
-    var attachEventToListItem = function (id, value) {
+    const attachEventToListItem = function (id, value) {
         $(`#${id}`).click(function () {
             options.callbackFunction(value);
         });
