@@ -10,7 +10,6 @@ namespace ParksService.Data.Concrete
         public IHostingEnvironment Environment { get; }
         public IAddressRepository AddressRepository { get; }
         public IParkRepository ParkRepository { get; }
-        public IImageDataRepository ImageDataRepository { get; }
         public IEntranceFeeRepository EntranceFeeRepository { get; }
 
         public UnitOfWork(IHostingEnvironment Environment)
@@ -18,7 +17,6 @@ namespace ParksService.Data.Concrete
             this.Environment = Environment;
             AddressRepository = new AddressRepository(Environment);
             ParkRepository = new ParkRepository(Environment);
-            ImageDataRepository = new ImageDataRepository(Environment);
             EntranceFeeRepository = new EntranceFeeRepository(Environment);
         }
 

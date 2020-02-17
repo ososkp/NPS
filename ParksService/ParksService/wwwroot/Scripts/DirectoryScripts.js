@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     // Refresh local parks.json from API source IF user presses "Refresh List" button
-    var refreshParks = function () {
+    const refreshParks = function () {
         $("#parks-button").text("Loading...");
         $.ajax({
             url: "https://developer.nps.gov/api/v1/parks",
@@ -15,8 +15,7 @@ $(document).ready(function () {
             type: "GET",
             dataType: "JSON",
             success: function (data) {
-                console.log(data);
-                var parks = JSON.stringify(data.data);
+                const parks = JSON.stringify(data.data);
                 $.ajax({
                     type: "POST",
                     url: "/Home/PopulateParks",
@@ -43,7 +42,7 @@ $(document).ready(function () {
 
     // Build table from LOCAL .json file
     // This table is also refreshed to read new .json file when refreshParks() is called
-    var table = $("#parks-table").DataTable({
+    const table = $("#parks-table").DataTable({
         ajax: {
             url: "/Home/GetParks",
             method: "GET",

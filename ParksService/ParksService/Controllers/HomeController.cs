@@ -41,7 +41,6 @@ namespace ParksService.Controllers
         public IActionResult PopulateParks([FromBody] IEnumerable<Park> parks)
         {
             // Repopulate the local Json and app data
-
             _parkService.RepopulateParksList(parks);
 
             return Content("Ok");

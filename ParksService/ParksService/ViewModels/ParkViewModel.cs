@@ -14,8 +14,6 @@ namespace ParksService.ViewModels
         public string Designation { get; set; }
 		public Address Address { get; set; }
 		public List<EntranceFee> EntranceFees { get; set; }
-//		public List<OperatingHours> OperatingHours { get; set; }
-//		public List<ImageData> Images { get; set; }
 
 		// Back-end
 		public string ParkCode { get; set; }

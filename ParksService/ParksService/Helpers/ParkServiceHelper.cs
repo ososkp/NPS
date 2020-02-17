@@ -102,63 +102,6 @@ namespace ParksService.Helpers
 				: data.EntranceFees;
 		}
 
-		//		public static IEnumerable<ImageData> MapImageData(Park data)
-		//		{
-		//			return data.Images.IsNullOrEmpty() ?
-		//				new List<ImageData>
-		//				{
-		//					new ImageData{
-		//						Credit = "",
-		//						AltText = "",
-		//						Title = "",
-		//						Id = new System.Guid(),
-		//						Caption = "",
-		//						Url = "",
-		//					}
-		//				}
-		//				: data.Images;
-		//		}
-
-		//		public static IEnumerable<OperatingHours> MapOperatingHours(Park data)
-		//		{
-		//			return data.OperatingHours.IsNullOrEmpty() ?
-		//				new List<OperatingHours>
-		//				{
-		//					new OperatingHours{
-		//						Name = "Not Listed",
-		//						Description = "",
-		//						StandardHours = new WeeklyHours
-		//						{
-		//							Sunday = "",
-		//							Monday = "",
-		//							Tuesday = "",
-		//							Wednesday = "",
-		//							Thursday = "",
-		//							Friday = "",
-		//							Saturday = ""
-		//						},
-		//						Exceptions = new List<HoursExceptions>
-		//						{
-		//							new HoursExceptions {
-		//								Name = "No Data",
-		//								StartDate = "",
-		//								EndDate = "",
-		//								ExceptionHours = new WeeklyHours{
-		//									Sunday = "",
-		//									Monday = "",
-		//									Tuesday = "",
-		//									Wednesday = "",
-		//									Thursday = "",
-		//									Friday = "",
-		//									Saturday = ""
-		//								}
-		//							}
-		//						}
-		//					}
-		//				}
-		//				: data.OperatingHours;
-		//		}
-
 		public static string GetFullState(string state)
 		{
 			return state.Length > STATE_CODE_LENGTH
@@ -168,7 +111,7 @@ namespace ParksService.Helpers
 
 	    public static IDictionary<string, string> GetStateDictionary()
 	    {
-			return FullState;
+				return FullState;
 	    }
 
 	    private static string ParseMultipleStates(string state)

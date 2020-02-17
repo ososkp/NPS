@@ -8,7 +8,6 @@ namespace ParksService.Data.Abstract
         IHostingEnvironment Environment { get; }
         IAddressRepository AddressRepository { get; }
         IParkRepository ParkRepository { get; }
-        IImageDataRepository ImageDataRepository { get; }
         IEntranceFeeRepository EntranceFeeRepository { get; }
     }
 }

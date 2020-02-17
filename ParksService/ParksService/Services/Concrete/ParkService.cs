@@ -63,6 +63,7 @@ namespace ParksService.Services.Concrete
 
         public IEnumerable<Park> RepopulateParksList(IEnumerable<Park> data)
         {
+            // Remove errant datapoints where the names are "?????"
             data = data.Where(p => !p.Name.StartsWith("?", StringComparison.Ordinal));
 
             WriteData(data);
