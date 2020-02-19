@@ -26,7 +26,7 @@
 
     const populateStateSearchResults = function (state) {
         $(".designation-search-results").empty();
-        $(".explore-designation").slideUp(150);
+        $(".explore-designation").slideUp(slideSpeed);
         $("#clear-results-button").show();
 
         $("#autocomplete").val("");
@@ -40,7 +40,8 @@
                 state: state
             },
             success: function (data) {
-                writeSearchResults(data.viewModel, state, $(".search-results"));
+                writeSearchResults(data.viewModel,
+                    state, $(".search-results"));
             }
         });
     }
@@ -51,9 +52,7 @@
         div.append(`<h2>${searchPredicate}</h2>`);
 
         parks.forEach(function (park) {
-            // If we're listing by designation, we want to show the state for each park
-            // If sorting by state it's unnecessary
-
+            // Only show state if searching by designation
             let nameLine = div[0].className.includes("designation-search-results")
                 ? `<h3>${park.fullName}</h3> <p class="state-listing">${park.fullState}</p>`
                 : `<h3>${park.fullName}</h3>`;
@@ -80,7 +79,8 @@
                             </div>
                             <div class="links col-md-6 text-center">
                                 <h4>Information:</h4>
-                                <input type="button" id="${park.id}" class="btn btn-primary btn-lg visitor-details" value="Visitors"></input><br />
+                                <input type="button" id="${park.id}" 
+                                    class="btn btn-primary btn-lg visitor-details" value="Visitors"></input><br />
                                 <a href="${park.url}" target="_blank" class="web-link table-link">Website</a>
                             </div>
                         </div>
@@ -149,7 +149,8 @@
                     designation: designation
                 },
                 success: function (data) {
-                    writeSearchResults(data.viewModel, `${designation}s`, $(".designation-search-results"));
+                    writeSearchResults(data.viewModel,
+                        `${designation}s`, $(".designation-search-results"));
                 }
             });
         }
