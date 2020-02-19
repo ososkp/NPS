@@ -32,17 +32,7 @@ namespace ParksService.Services.Concrete
 
             return _unitOfWork.ParkRepository.Find(p => p.States == fullStateDictionary[state]);
         }
-
-        public IEnumerable<Park> GetParksByState(string state)
-        {
-            return _unitOfWork.ParkRepository.Find(p => p.States == state);
-        }
-
-        public IEnumerable<Park> GetParksByDesignation(string designation)
-        {
-            return _unitOfWork.ParkRepository.Find(p => p.Designation == designation);
-        }
-
+    
         public IEnumerable<Park> GetParksByGeneralDesignation(string designation)
         {
             return designation.Equals("historical site")
