@@ -1,4 +1,3 @@
-// http://api.nps.gov/api/v1/parks?limit=500&fields=addresses&api_key=5hCAzcru81QKEg1bDSyJz6KlMaFYTa3HTWmACBBs
 using System;
 using System.Collections.Generic;
 using ParksService.Models;

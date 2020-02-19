@@ -9,16 +9,15 @@ namespace ParksService.Data.Concrete
     {
         public IHostingEnvironment Environment { get; }
         public IAddressRepository AddressRepository { get; }
-        public IParkRepository ParkRepository { get; }
         public IEntranceFeeRepository EntranceFeeRepository { get; }
+        public IParkRepository ParkRepository { get; }
 
         public UnitOfWork(IHostingEnvironment Environment)
         {
             this.Environment = Environment;
             AddressRepository = new AddressRepository(Environment);
-            ParkRepository = new ParkRepository(Environment);
             EntranceFeeRepository = new EntranceFeeRepository(Environment);
+            ParkRepository = new ParkRepository(Environment);
         }
-
     }
 }
