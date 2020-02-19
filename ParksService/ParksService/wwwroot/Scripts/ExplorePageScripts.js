@@ -53,6 +53,7 @@
         parks.forEach(function (park) {
             // If we're listing by designation, we want to show the state for each park
             // If sorting by state it's unnecessary
+
             let nameLine = div[0].className.includes("designation-search-results")
                 ? `<h3>${park.fullName}</h3> <p class="state-listing">${park.fullState}</p>`
                 : `<h3>${park.fullName}</h3>`;

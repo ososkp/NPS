@@ -11,6 +11,7 @@ namespace ParksService.Data.Concrete.Repositories
     public abstract class Repository<T>
     {
         protected readonly string FilePath;
+        private IEnumerable<T> data;
 
         protected Repository(IHostingEnvironment env, string fileName)
         {
@@ -24,26 +25,24 @@ namespace ParksService.Data.Concrete.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            var result = new List<T>();
-            using (var reader = new StreamReader(FilePath))
+            if (data.IsNullOrEmpty())
             {
+                using var reader = new StreamReader(FilePath);
                 var json = reader.ReadToEnd();
 
-                result = json.IsNullOrEmpty() ?
+                data = json.IsNullOrEmpty() ?
                     new List<T>()
-                    : JsonConvert.DeserializeObject<IEnumerable<T>>(json).ToList();
-            }
+                    : JsonConvert.DeserializeObject<IEnumerable<T>>(json);
 
-            return result;
+            }
+            return data.ToList();
         }
 
         public void WriteData(IEnumerable<T> data)
         {
-            using (var file = File.CreateText(FilePath))
-            {
-                var serializer = new JsonSerializer();
-                serializer.Serialize(file, data);
-            }
+            using var file = File.CreateText(FilePath);
+            var serializer = new JsonSerializer();
+            serializer.Serialize(file, data);
         }
 
         public string GetFilePath()

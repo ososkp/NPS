@@ -4,6 +4,5 @@ namespace ParksService.Data.Abstract.Repositories
 {
     public interface IParkRepository : IRepository<Park>
     {
-	    string GetFilePath();
     }
 }
