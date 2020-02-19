@@ -9,6 +9,5 @@ namespace ParksService.Data.Abstract.Repositories
         IEnumerable<T> Find(Func<T, bool> predicate);
         IEnumerable<T> GetAll();
         void WriteData(IEnumerable<T> data);
-        string GetFilePath();
     }
 }

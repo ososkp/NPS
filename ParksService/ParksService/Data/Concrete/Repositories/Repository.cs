@@ -35,7 +35,7 @@ namespace ParksService.Data.Concrete.Repositories
                     : JsonConvert.DeserializeObject<IEnumerable<T>>(json);
 
             }
-            return data.ToList();
+            return data;
         }
 
         public void WriteData(IEnumerable<T> data)
@@ -43,11 +43,6 @@ namespace ParksService.Data.Concrete.Repositories
             using var file = File.CreateText(FilePath);
             var serializer = new JsonSerializer();
             serializer.Serialize(file, data);
-        }
-
-        public string GetFilePath()
-        {
-            return FilePath;
         }
     }
 }
