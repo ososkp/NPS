@@ -18,7 +18,7 @@ $(document).ready(function () {
                 const parks = JSON.stringify(data.data);
                 $.ajax({
                     type: "POST",
-                    url: "/Home/PopulateParks",
+                    url: "/Park/PopulateParks",
                     data: parks,
                     dataType: "JSON",
                     contentType: "application/json; charset=utf-8",
@@ -42,9 +42,10 @@ $(document).ready(function () {
 
     // Build table from LOCAL .json file
     // This table is also refreshed to read new .json file when refreshParks() is called
+
     const table = $("#parks-table").DataTable({
         ajax: {
-            url: "/Home/GetParks",
+            url: "/Park/GetParks",
             method: "GET",
             dataType: "JSON",
             dataSrc: "viewModel"
@@ -87,7 +88,7 @@ $(document).ready(function () {
             const data = table.row($(this).parents("tr")).data();
             const id = data["id"];
 
-            const url = `/Home/ViewDetails/${id}`;
+            const url = `/Park/ViewDetails/${id}`;
 
             $.get(url,
                 function (data) {

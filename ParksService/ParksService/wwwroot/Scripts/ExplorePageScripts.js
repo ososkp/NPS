@@ -1,23 +1,24 @@
 ﻿$(document).ready(function () {
     const searchBoxDivOffset = 75;
+    const slideSpeed = 150;
 
-/* AutoComplete Module Options */
-//      elementType:            What we are adding to the DOM for each result - for example, "li" --> <li>
-//      domClass:               Class given to each element we are adding
-//      dataSource:             Source of autocomplete options
-//      callbackFunction:       Handler for returned data
-//      inputBox:               Input element that is being written into by user
-//      container:              <div> that wraps the resulting dropdown
+    /* AutoComplete Module Options */
+    //      elementType:            What we are adding to the DOM for each result - for example, "li" --> <li>
+    //      domClass:               Class given to each element we are adding
+    //      dataSource:             Source of autocomplete options
+    //      callbackFunction:       Handler for returned data
+    //      inputBox:               Input element that is being written into by user
+    //      container:              <div> that wraps the resulting dropdown
     const myOptions = {
         elementType: "li",
         domClass: "match",
         dataSource: states.parksLocations,
-        callbackFunction: function(data) {
+        callbackFunction: function (data) {
             populateStateSearchResults(data);
         },
         inputBox: "autocomplete",
         container: "autocomplete-container",
-        getInputBox: function() {
+        getInputBox: function () {
             return $(`#${this.inputBox}`);
         }
     };
@@ -38,7 +39,7 @@
             data: {
                 state: state
             },
-            success: function(data) {
+            success: function (data) {
                 writeSearchResults(data.viewModel, state, $(".search-results"));
             }
         });
@@ -121,9 +122,9 @@
 
     $("body").on("click",
         ".view-details",
-        function(button){
+        function (button) {
             const id = button.target.id;
-            const url = `/Home/ViewDetails/${id}`
+            const url = `/Park/ViewDetails/${id}`
 
             $.get(url, function (data) {
                 bootBoxModal(data); // BootBoxHelper.bootBoxModal
@@ -135,7 +136,7 @@
         { button: $(this) },
         function (button) {
             $(".search-results").empty();
-            $(".explore-state").slideUp(150);
+            $(".explore-state").slideUp(slideSpeed);
             $("#clear-results-button").show();
 
             const designation = button.target.id.replace("-", " ");
@@ -146,7 +147,7 @@
                 data: {
                     designation: designation
                 },
-                success: function(data) {
+                success: function (data) {
                     writeSearchResults(data.viewModel, `${designation}s`, $(".designation-search-results"));
                 }
             });
@@ -156,8 +157,8 @@
     $("#clear-results-button").on("click",
         function () {
             $("#clear-results-button").hide();
-            $(".explore-designation").slideDown(150);
-            $(".explore-state").slideDown(150);
+            $(".explore-designation").slideDown(slideSpeed);
+            $(".explore-state").slideDown(slideSpeed);
             $(".search-results").empty();
             $(".designation-search-results").empty();
         });

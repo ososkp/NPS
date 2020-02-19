@@ -20,7 +20,5 @@ namespace ParksService.Models
 
 		public List<Address> Addresses { get; set; }
 		public List<EntranceFee> EntranceFees { get; set; }
-//		public List<OperatingHours> OperatingHours { get; set; }
-//		public List<ImageData> Images { get; set; }
 	}
 }
