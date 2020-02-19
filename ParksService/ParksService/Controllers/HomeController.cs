@@ -22,26 +22,26 @@ namespace ParksService.Controllers
 
         public IActionResult About()
         {
-            var parks = _parkService.GetAll();
-            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
-
+            var viewModel = GetAndMapParks();
             return View(viewModel);
         }
 
         public IActionResult Explore()
         {
-            var parks = _parkService.GetAll();
-            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
-
+            var viewModel = GetAndMapParks();
             return View(viewModel);
         }
 
         public IActionResult Directory()
         {
-            var parks = _parkService.GetAll();
-            var viewModel = _mapper.Map<IEnumerable<ParkViewModel>>(parks);
-
+            var viewModel = GetAndMapParks();
             return View(viewModel);
+        }
+
+        public IEnumerable<ParkViewModel> GetAndMapParks()
+        {
+            var parks = _parkService.GetAll();
+            return _mapper.Map<IEnumerable<ParkViewModel>>(parks);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
