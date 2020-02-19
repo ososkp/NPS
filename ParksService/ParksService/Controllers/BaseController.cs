@@ -7,11 +7,12 @@ namespace ParksService.Controllers
 {
     public abstract class BaseController : Controller
     {
+		protected readonly IHostingEnvironment _env;
 	    protected readonly IParkService _parkService;
 	    protected readonly IMapper _mapper;
-		protected readonly IHostingEnvironment _env;
 
-	    protected BaseController(IHostingEnvironment env, IParkService parkService, IMapper mapper)
+	    protected BaseController(IHostingEnvironment env,
+			IParkService parkService, IMapper mapper)
 	    {
 			_env = env;
 		    _parkService = parkService;
