@@ -35,14 +35,13 @@ $(document).ready(function () {
         });
     };
 
-    // Button press from view to call refresh
+    // This button is currently hidden as the API is broken
     $("#parks-button").click(function () {
         refreshParks();
     });
 
     // Build table from LOCAL .json file
     // This table is also refreshed to read new .json file when refreshParks() is called
-
     const table = $("#parks-table").DataTable({
         ajax: {
             url: "/Park/GetParks",
@@ -81,7 +80,6 @@ $(document).ready(function () {
         pageLength: 50
     });
 
-    // When a user clicks on "View Details" button, show partial view popup with details
     $("#parks-table tbody").on("click",
         "button",
         function () {

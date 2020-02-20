@@ -49,11 +49,9 @@
     $("body").on("click",
         ".map-button",
         function (button) {
-            coords = button.target.id
-            let url = "http://maps.google.com/maps?q=";
-            url = url + coords.replace(/[a-zA-Z]|:|\s/g, "");
-            let win = window.open(url, '_blank');
-            win.focus();
+            const coords = button.target.id
+            const url = getUrl(coords);
+            const win = window.open(url, '_blank');
         // Ensures Explore page doesn't refresh when this page loads
             return false;
     });
