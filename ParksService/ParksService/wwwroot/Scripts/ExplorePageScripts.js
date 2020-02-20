@@ -99,37 +99,13 @@
     $("body").on("click",
         ".visitor-details",
         function (button) {
-            const url = `/Explore/VisitorDetails`;
             const id = button.target.id
+            const url = `/Explore/VisitorDetails/${id}`;
             $.get(url,
-                { id: id },
                 function (data) {
-                    bootbox.dialog({
-                        title: null,
-                        message: data,
-                        buttons: {
-                            main: {
-                                label: "Okay",
-                                className: "btn-primary",
-                                callback: function () { }
-                            }
-                        },
-                        className: "modal-large"
-                    });
+                    bootBoxModal(data); // BootBoxHelper.bootBoxModal
                 }
             );
-        }
-    );
-
-    $("body").on("click",
-        ".view-details",
-        function (button) {
-            const id = button.target.id;
-            const url = `/Park/ViewDetails/${id}`
-
-            $.get(url, function (data) {
-                bootBoxModal(data); // BootBoxHelper.bootBoxModal
-            });
         }
     );
 
