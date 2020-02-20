@@ -1,10 +1,10 @@
 ﻿/* AutoComplete Module Options */
-//      elementType:            What we are adding to the DOM for each result - for example, <li>
+//      elementType:            What we are adding to the DOM for each result
 //      domClass:               Class given to each element we are adding
-//      dataSource:             Source of autocomplete options
-//      callbackFunction:       Handler for returned data
-//      inputBox:               Input element that is being written into by user
 //      container:              <div> that wraps the resulting dropdown
+//      dataSource:             Source of autocomplete options
+//      getInputBox:            Function to access state input box
+//      callbackFunction:       Handler for returned data
 
 const AutoCompleteModule = function () {
     let options, currentFocus, index;
@@ -17,59 +17,66 @@ const AutoCompleteModule = function () {
     const setValues = function () {
         let box = options.getInputBox();
         box.on("keyup", function (e) {
-            if (!checkNavigationButton(this, e))
-                searchData(box.val()
-                    .toLowerCase()
-                    .replace(/[^a-zA-Z]/g, ""));
+            if (!checkNavigationButton(this, e)) {
+                searchData(box.val());
+            }
         });
     };
 
     const checkNavigationButton = function (caller, e) {
-        // If arrow up or arrow down
-        if (e.keyCode === 38 || e.keyCode === 40) {
-            return addActive(e.keyCode - 39);
-        // If enter
-        } else if (e.keyCode === 13) {
-            e.preventDefault();
-            // If the user has something in the list highlighted, 'enter' selects that state/region
-            if (currentFocus > -1) {
-                $(`.${options.domClass}-${currentFocus}`).click();
-                return true;
-            // Otherwise, select the first item in the list
-            } else if (currentFocus === -1 && index > 0) {
-                $(`.${options.domClass}-0`).addClass("autocomplete-active");
-                $(`.${options.domClass}-0`).click();
-            }
+        let isNavigationButton = true;
+
+        switch (e.keyCode) {
+            case 38:    // Up
+            case 40:    // Down
+                handleArrowPressed(e.keyCode - 39);
+                break
+            case 13:    // Enter
+                e.preventDefault();
+                handleEnterPressed();
+                break;
+            default:
+                isNavigationButton = false;
         }
-        return false;
+        return isNavigationButton;
     }
 
-    const addActive = function (key) {
-        // key will either be -1 or 1 and is used to set bounds on highlighting the list
+    const handleArrowPressed = function (key) {
         currentFocus += key;
         if (currentFocus >= index - 1) currentFocus = index - 1;
         if (currentFocus < 0) currentFocus = 0;
-        $(`.${options.domClass}-${currentFocus}`).addClass("autocomplete-active");
-        $(`.${options.domClass}-${currentFocus - key}`).removeClass("autocomplete-active");
-        return true;
+        $(`.${options.domClass}-${currentFocus}`)
+            .addClass("autocomplete-active");
+        $(`.${options.domClass}-${currentFocus - key}`)
+            .removeClass("autocomplete-active");
+    }
+
+    const handleEnterPressed = function () {
+        // If item highlighted, select it
+        if (currentFocus > -1) {
+            $(`.${options.domClass}-${currentFocus}`).click();
+        // Otherwise, select the first item in the list
+        } else if (currentFocus === -1 && index > 0) {
+            $(`.${options.domClass}-0`)
+                .addClass("autocomplete-active");
+            $(`.${options.domClass}-0`)
+                .click();
+        }
     }
 
     const searchData = function (text) {
-        // Repopulating the autcomplete list based on the value in the text box
+        text = text.toLowerCase().replace(/[^a-zA-Z]/g, "")
         clearDropdown();
-        if (!options.getInputBox().val()) {
-            return;
+        if (options.getInputBox().val()) {
+            index = 0;
+            options.dataSource.forEach(function (value, key) {
+                if (key.includes(text)) {
+                    appendListItem(key, value);
+                    attachEventToListItem(key, value);
+                    index++;
+                }
+            });
         }
-
-        index = 0;
-        options.dataSource.forEach(function (value, key) {
-            let newKey = key.replace(/ /g, "");
-            if (key.includes(text)) {
-                appendListItem(newKey, value);
-                attachEventToListItem(newKey, value);
-                index++;
-            }
-        });
     };
 
     const clearDropdown = function () {
@@ -79,7 +86,8 @@ const AutoCompleteModule = function () {
 
     const appendListItem = function (id, value) {
         $(`#${options.container}`)
-            .append(`<${options.elementType} class="${options.domClass} ${options.domClass}-${index}" id="${id}">
+            .append(`<${options.elementType} 
+                class="${options.domClass} ${options.domClass}-${index}" id="${id}">
                         ${value}
                     </${options.elementType}>`);
     };
@@ -90,7 +98,5 @@ const AutoCompleteModule = function () {
         });
     };
 
-    return {
-        init: init
-    };
+    return { init };
 }();

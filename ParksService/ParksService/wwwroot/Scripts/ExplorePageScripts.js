@@ -3,24 +3,23 @@
     const slideSpeed = 150;
 
     /* AutoComplete Module Options */
-    //      elementType:            What we are adding to the DOM for each result - for example, "li" --> <li>
+    //      elementType:            What we are adding to the DOM for each result
     //      domClass:               Class given to each element we are adding
-    //      dataSource:             Source of autocomplete options
-    //      callbackFunction:       Handler for returned data
-    //      inputBox:               Input element that is being written into by user
     //      container:              <div> that wraps the resulting dropdown
+    //      dataSource:             Source of autocomplete options
+    //      getInputBox:            Function to access state input box
+    //      callbackFunction:       Handler for returned data
     const myOptions = {
         elementType: "li",
         domClass: "match",
+        container: "autocomplete-container",
         dataSource: states.parksLocations,
+        getInputBox: function () {
+            return $(`#autocomplete`);
+        },
         callbackFunction: function (data) {
             populateStateSearchResults(data);
         },
-        inputBox: "autocomplete",
-        container: "autocomplete-container",
-        getInputBox: function () {
-            return $(`#${this.inputBox}`);
-        }
     };
     AutoCompleteModule.init(myOptions);
 
@@ -36,9 +35,7 @@
             url: "/Explore/GetParksByState/",
             type: "GET",
             dataType: "JSON",
-            data: {
-                state: state
-            },
+            data: { state },
             success: function (data) {
                 writeSearchResults(data.viewModel,
                     state, $(".search-results"));
