@@ -1,16 +1,23 @@
 ﻿import { NPS_API } from './Helpers/APIKeys.js';
 
 $(document).ready(function () {
+    const PARKS_BUTTON = "#parks-button";
+    const PARKS_TABLE = "#parks-table";
+    const API_URL = "https://developer.nps.gov/api/v1/parks";
+    const API_FIELDS = "addresses,entranceFees";
+    const API_LIMIT = 496;
+    const API_SORT = "-name";
+
     // Refresh local parks.json from API source IF user presses "Refresh List" button
     const refreshParks = function () {
-        $("#parks-button").text("Loading...");
+        $(PARKS_BUTTON).text("Loading...");
         $.ajax({
-            url: "https://developer.nps.gov/api/v1/parks",
+            url: API_URL,
             data: {
-                limit: 496,
-                fields: "addresses,entranceFees",
+                limit: API_LIMIT,
+                fields: API_FIELDS,
                 api_key: NPS_API,
-                sort: "-name"
+                sort: API_SORT
             },
             type: "GET",
             dataType: "JSON",
@@ -23,26 +30,30 @@ $(document).ready(function () {
                     dataType: "JSON",
                     contentType: "application/json; charset=utf-8",
                     complete: function () {
-                        $("#parks-table").DataTable().ajax.reload();
-                        $("#parks-button").text("Refresh Parks List");
-                        $("#parks-button").blur();
+                        $(PARKS_TABLE).DataTable().ajax.reload();
+                        $(PARKS_BUTTON).text("Refresh Parks List");
+                        $(PARKS_BUTTON).blur();
                     }
                 });
             },
             error: function (error) {
-                console.log(error)
+                handleRefreshParksError(error);
             }
         });
     };
 
+    const handleRefreshParksError = function (error) {
+        console.log(error);
+    }
+
     // This button is currently hidden as the API is broken
-    $("#parks-button").click(function () {
+    $(PARKS_BUTTON).click(function () {
         refreshParks();
     });
 
     // Build table from LOCAL .json file
     // This table is also refreshed to read new .json file when refreshParks() is called
-    const table = $("#parks-table").DataTable({
+    const table = $(PARKS_TABLE).DataTable({
         ajax: {
             url: "/Park/GetParks",
             method: "GET",
@@ -80,7 +91,7 @@ $(document).ready(function () {
         pageLength: 50
     });
 
-    $("#parks-table tbody").on("click",
+    $(PARKS_TABLE + " tbody").on("click",
         "button",
         function () {
             const data = table.row($(this).parents("tr")).data();

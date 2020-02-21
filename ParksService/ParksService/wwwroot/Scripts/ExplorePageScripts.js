@@ -2,6 +2,19 @@
     const searchBoxDivOffset = 75;
     const slideSpeed = 150;
 
+    const DIV_AUTOCOMPLETE = "#autocomplete"
+    const DIV_DESIGNATION_SEARCH_RESULTS = ".designation-search-results";
+    const DIV_EXPLORE_DESIGNATION = ".explore-designation";
+    const DIV_EXPLORE_STATE = ".explore-state";
+    const DIV_SEARCH_RESULTS = ".search-results";
+    const DIV_VISITOR_DETAILS = ".visitor-details";
+    const BUTTON_CLEAR_RESULTS = "#clear-results-button";
+    const BUTTON_LINK = ".btn-link";
+    const CLASS_MATCH = ".match";
+    const STATES_BOX = ".states-box";
+    const BODY = "body";
+    const CLICK = "click";
+
     /* AutoComplete Module Options */
     //      elementType:            What we are adding to the DOM for each result
     //      domClass:               Class given to each element we are adding
@@ -15,7 +28,7 @@
         container: "autocomplete-container",
         dataSource: states.parksLocations,
         getInputBox: function () {
-            return $(`#autocomplete`);
+            return $(DIV_AUTOCOMPLETE);
         },
         callbackFunction: function (data) {
             populateStateSearchResults(data);
@@ -24,12 +37,12 @@
     AutoCompleteModule.init(myOptions);
 
     const populateStateSearchResults = function (state) {
-        $(".designation-search-results").empty();
-        $(".explore-designation").slideUp(slideSpeed);
-        $("#clear-results-button").show();
+        $(DIV_DESIGNATION_SEARCH_RESULTS).empty();
+        $(DIV_EXPLORE_DESIGNATION).slideUp(slideSpeed);
+        $(BUTTON_CLEAR_RESULTS).show();
 
-        $("#autocomplete").val("");
-        $(".match").remove();
+        $(DIV_AUTOCOMPLETE).val("");
+        $(CLASS_MATCH).remove();
 
         $.ajax({
             url: "/Explore/GetParksByState/",
@@ -38,7 +51,7 @@
             data: { state },
             success: function (data) {
                 writeSearchResults(data.viewModel,
-                    state, $(".search-results"));
+                    state, $(DIV_SEARCH_RESULTS));
             }
         });
     }
@@ -90,11 +103,11 @@
             scrollTop: div.offset().top - searchBoxDivOffset
         }, "medium");
 
-        $(".states-box").val("");
+        $(STATES_BOX).val("");
     }
 
-    $("body").on("click",
-        ".visitor-details",
+    $(BODY).on(CLICK,
+        DIV_VISITOR_DETAILS,
         function (button) {
             const id = button.target.id
             const url = `/Explore/VisitorDetails/${id}`;
@@ -106,12 +119,12 @@
         }
     );
 
-    $(".btn-link").on("click",
+    $(BUTTON_LINK).on(CLICK,
         { button: $(this) },
         function (button) {
-            $(".search-results").empty();
-            $(".explore-state").slideUp(slideSpeed);
-            $("#clear-results-button").show();
+            $(DIV_SEARCH_RESULTS).empty();
+            $(DIV_EXPLORE_STATE).slideUp(slideSpeed);
+            $(BUTTON_CLEAR_RESULTS).show();
 
             const designation = button.target.id.replace("-", " ");
             $.ajax({
@@ -123,18 +136,18 @@
                 },
                 success: function (data) {
                     writeSearchResults(data.viewModel,
-                        `${designation}s`, $(".designation-search-results"));
+                        `${designation}s`, $(DIV_DESIGNATION_SEARCH_RESULTS));
                 }
             });
         }
     );
 
-    $("#clear-results-button").on("click",
+    $(BUTTON_CLEAR_RESULTS).on(CLICK,
         function () {
-            $("#clear-results-button").hide();
-            $(".explore-designation").slideDown(slideSpeed);
-            $(".explore-state").slideDown(slideSpeed);
-            $(".search-results").empty();
-            $(".designation-search-results").empty();
+            $(BUTTON_CLEAR_RESULTS).hide();
+            $(DIV_EXPLORE_DESIGNATION).slideDown(slideSpeed);
+            $(DIV_EXPLORE_STATE).slideDown(slideSpeed);
+            $(DIV_SEARCH_RESULTS).empty();
+            $(DIV_DESIGNATION_SEARCH_RESULTS).empty();
         });
 });

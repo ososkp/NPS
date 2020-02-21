@@ -8,6 +8,7 @@
 
 const AutoCompleteModule = function () {
     let options, currentFocus, index;
+    const AUTOCOMPLETE_ACTIVE = "autocomplete-active";
 
     const init = function (autoCompleteOptions) {
         options = autoCompleteOptions;
@@ -46,9 +47,9 @@ const AutoCompleteModule = function () {
         if (currentFocus >= index - 1) currentFocus = index - 1;
         if (currentFocus < 0) currentFocus = 0;
         $(`.${options.domClass}-${currentFocus}`)
-            .addClass("autocomplete-active");
+            .addClass(AUTOCOMPLETE_ACTIVE);
         $(`.${options.domClass}-${currentFocus - key}`)
-            .removeClass("autocomplete-active");
+            .removeClass(AUTOCOMPLETE_ACTIVE);
     }
 
     const handleEnterPressed = function () {
@@ -58,7 +59,7 @@ const AutoCompleteModule = function () {
         // Otherwise, select the first item in the list
         } else if (currentFocus === -1 && index > 0) {
             $(`.${options.domClass}-0`)
-                .addClass("autocomplete-active");
+                .addClass(AUTOCOMPLETE_ACTIVE);
             $(`.${options.domClass}-0`)
                 .click();
         }
