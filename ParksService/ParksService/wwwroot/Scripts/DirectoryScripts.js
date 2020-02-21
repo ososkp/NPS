@@ -88,7 +88,7 @@ $(document).ready(function () {
                 "defaultContent": "<button class=\"btn btn-primary\">View Details</button>"
             }
         ],
-        pageLength: 50
+        pageLength: 25
     });
 
     $(PARKS_TABLE + " tbody").on("click",
